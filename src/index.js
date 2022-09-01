@@ -4,7 +4,7 @@ import 'bootstrap';
 import html from "./index.html";
 console.log(html)
 
-document.body.innerHTML = html
+document.getElementById("content").innerHTML = html
 
 let title = document.querySelector('h1')
 console.log(title)
