@@ -1,7 +1,11 @@
 import _ from "lodash";
 import "./style.scss";
 import "bootstrap";
-import html from "./index.html";
-console.log(html);
 
-document.getElementById("content").innerHTML = html;
+import template from "./template.html";
+
+import { test3 } from "./test3";
+
+document.body.innerHTML = template;
+
+test3();
