@@ -8,6 +8,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Production',
+            template: path.resolve(__dirname, './src/template.html'), 
+            filename: 'index.html',
         }),
     ],
     output: {
@@ -44,6 +46,10 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
             },
         ]
     },
