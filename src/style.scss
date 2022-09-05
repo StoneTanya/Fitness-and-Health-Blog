@@ -1,5 +1,28 @@
 @import "~bootstrap/scss/bootstrap";
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+$font-main:'Playfair Display',
+serif;
+$font-other: 'Roboto',
+sans-serif;
+$primary-color: #177165;
+$background: #E1F4F2;
+$text: #777777;
+$title-color: #fff;
+$paragraph: #A4D6CF;
+$btn-border: 2px solid $primary-color;
+$font-size-for-common-text: 1.2rem;
+$margin-top-about-me: 2.5rem;
+$margin-bottom-about-me: 2.5rem;
+$title-size: 2.8rem;
+$subtitle-size: 2rem;
+$menu-size: 0.9rem;
+
 body,
 html {
     width: 100%;
@@ -7,58 +30,44 @@ html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-size: 16px;
-    font-family: helvetica, arial;
-    background: #f9f9f9;
-    color: #111;
 }
 
-.wrapper {
+#test__wrapper {
     width: 100%;
     height: 100%;
-    display: table;
-}
-
-.main {
-    display: table-cell;
+    display: none;
     vertical-align: middle;
     text-align: center;
+    .quiz__head {
+        font-size: 20pt;
+        margin: 10px;
+        margin-bottom: 50px;
+    }
+    
+    .head__content {
+        padding: 5px;
+    }
+    
+    .quiz__body {
+        margin: 10px;
+    }
+    
+    .quiz__footer {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+    }
+    
+    .footer__content {
+        padding: 5px;
+    }
 }
 
-.quiz-frame {
-    border: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.quiz__head {
-    font-size: 20pt;
-    margin: 10px;
-    margin-bottom: 50px;
-}
-
-.head__content {
-    padding: 5px;
-}
-
-.quiz__body {
-    margin: 10px;
-}
-
-.quiz__footer {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
-}
-
-.footer__content {
-    padding: 5px;
-}
-
-.button {
+.buttons__content button {
     border: 0;
     border-radius: 10px;
-    background: #6477EB;
+    background:  #023A15;
     color: #fff;
     padding: 10px 25px;
     width: 70%;
@@ -66,4 +75,18 @@ html {
     display: block;
     margin: 2px auto;
     cursor: pointer;
+}
+
+#test__block {
+    background: rgba(255, 230, 226, 1);
+    height: 30vh;
+}
+
+
+    .test__block_choise button {
+    border: 0;
+    border-radius: 10px;
+    background: rgba(79, 82, 97, 1);
+    color: white;
+    padding: 2% 3%;
 }
