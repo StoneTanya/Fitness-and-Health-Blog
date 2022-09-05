@@ -3,9 +3,13 @@ import "./style.scss";
 import "bootstrap";
 
 import template from "./template.html";
+import ComponentTest from "./components/test"
 
-import { test3 } from "./test3";
+import { startTest, Test, results } from "./test3";
 
 document.body.innerHTML = template;
 
-test3();
+startTest();
+console.log(results)
+ComponentTest();
+ComponentHeader();

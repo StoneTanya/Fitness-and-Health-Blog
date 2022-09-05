@@ -43,7 +43,7 @@ let questions = [
       rightButton.value = question.right; // меняем текст вопроса справа
     } else {
       console.log("Ваш балл: " + result.get(finalMask));
-    }-
+    }
   }
   
   document.addEventListener("DOMContentLoaded", updateQuestionTitle); // при загрузке страницы выводим вопрос 1 с индексом [0]
