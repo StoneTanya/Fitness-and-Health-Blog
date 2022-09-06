@@ -6,19 +6,14 @@
     box-sizing: border-box;
 }
 
-$font-main:'Playfair Display',
-serif;
-$font-other: 'Roboto',
-sans-serif;
-$primary-color: #177165;
-$background: #E1F4F2;
-$text: #777777;
+// накидала варианты, что может быть будем использовать, по ходу будем править 
+
+$font-main: serif;      // заменим, как подключим шрифты
+$font-other: 'Roboto';      // заменим, как подключим шрифты
+$back-color-pink:  rgba(255, 230, 226, 1);
+$back-color-header: rgba(48, 48, 48, 1);
+$akcent-color: rgba(240, 156, 150, 1);
 $title-color: #fff;
-$paragraph: #A4D6CF;
-$btn-border: 2px solid $primary-color;
-$font-size-for-common-text: 1.2rem;
-$margin-top-about-me: 2.5rem;
-$margin-bottom-about-me: 2.5rem;
 $title-size: 2.8rem;
 $subtitle-size: 2rem;
 $menu-size: 0.9rem;
@@ -35,7 +30,6 @@ html {
 #quiz__wrapper {
     width: 100%;
     height: 100%;
-    // display: none;
     vertical-align: middle;
     text-align: center;
     .quiz__head {
@@ -79,7 +73,7 @@ html {
 
 #test__block {
     background: rgba(255, 230, 226, 1);
-    height: 30vh;
+    padding: 2% 4%;
 }
 
 
