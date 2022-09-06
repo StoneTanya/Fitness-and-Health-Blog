@@ -1,33 +1,32 @@
-export function test1() {
 class Test {
     constructor(questions, results) {
-        this.questions = questions;     //Массив с вопросами
-        this.results = results;  //массив с результатами       
-        this.score = "";      //Количество набранных очков
-        this.result = 0;     //Номер результата из массива
-        this.current = 0;    //Номер текущего вопроса
+        this.questions = questions; //Массив с вопросами
+        this.results = results; //массив с результатами       
+        this.score = ""; //Количество набранных очков
+        this.result = 0; //Номер результата из массива
+        this.current = 0; //Номер текущего вопроса
     }
 
-    Click(index) {
-        //Добавляем очки
-        let value = this.questions[this.current].Click(index);
+    click(index) {
+        //Добавляем баллы
+        let value = this.questions[this.current].click(index);
         this.score += value;
         console.log(this.score);
-        this.Next();
+        this.next();
     }
-    
+
     //Переход к следующему вопросу
-    Next() {
+    next() {
         this.current++;
         if (this.current >= this.questions.length) {
-            this.End();
+            this.end();
         }
     }
 
     //Если вопросы кончились, проверка результата 
-    End() {
+    end() {
         for (let i = 0; i < this.results.length; i++) {
-            if (this.results[i].Check(this.score)) {
+            if (this.results[i].check(this.score)) {
                 this.result = i;
             }
         }
@@ -40,7 +39,7 @@ class Question {
         this.text = text;
         this.answers = answers;
     }
-    Click(index) {
+    click(index) {
         return this.answers[index].value;
     }
 }
@@ -60,16 +59,14 @@ class Result {
         this.value = value;
     }
 
-    Check(value) {
+    check(value) {
         if (this.value === value) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
 }
-
 //Массив с результатами
 const results =
     [
@@ -103,63 +100,38 @@ const questions =
             ]),
     ];
 
-//Экземпляр теста
-const test = new Test(questions, results);
 
-Update();
 
 //Обновление теста
-function Update() {
-    const headElem = document.getElementById('head');
-    const buttonsElem = document.getElementById('buttons');
-    const pagesElem = document.getElementById('pages');
+function createQuiz(test) {
+    const headElem = document.getElementById('quiz__head');
+    const buttonsElem = document.getElementById('quiz__buttons');
+    const pagesElem = document.getElementById('quiz__pages');
     //Проверяем, есть ли ещё вопросы
     if (test.current < test.questions.length) {
-
-        //Если есть, меняем вопрос в заголовке
-        headElem.innerHTML = test.questions[test.current].text;
-
-        //Удаляем старые варианты ответов
-        buttonsElem.innerHTML = "";
-        //Создаём кнопки для новых вариантов ответов
-        for (let i = 0; i < test.questions[test.current].answers.length; i++) {
+        headElem.innerHTML = test.questions[test.current].text;   //Если есть, меняем вопрос в заголовке
+        buttonsElem.innerHTML = "";               //Удаляем старые варианты ответов
+        
+        for (let i = 0; i < test.questions[test.current].answers.length; i++) {          //Создаём кнопки для новых вариантов ответов
             let btn = document.createElement("button");
             btn.className = "button";
             btn.innerHTML = test.questions[test.current].answers[i].text;
-            btn.setAttribute("index", i);
+            btn.addEventListener("click", () => {
+                test.click(i);
+                createQuiz(test);
+            });
             buttonsElem.appendChild(btn);
         }
+        pagesElem.innerHTML = (test.current + 1) + " / " + test.questions.length;   //Выводим номер текущего вопроса
 
-        //Выводим номер текущего вопроса
-        pagesElem.innerHTML = (test.current + 1) + " / " + test.questions.length;
-
-        //Вызываем функцию, которая прикрепит события к новым кнопкам
-        Init();
-    }
-    else {
+    } else {
         //Если это конец, то выводим результат
         buttonsElem.innerHTML = "";
         headElem.innerHTML = test.results[test.result].text;
-        pagesElem.innerHTML = "Очки: " + test.score;
     }
 }
 
-function Init() {
-    //Находим все кнопки
-    let btns = document.getElementsByClassName("button");
-
-    for (let i = 0; i < btns.length; i++) {
-        //Прикрепляем событие для каждой отдельной кнопки
-        //При нажатии на кнопку будет вызываться функция Click()
-        btns[i].addEventListener("click", function (e) { Click(e.target.getAttribute("index")); });
-    }
-}
-
-function Click(index) {
-    //Получаем номер правильного ответа
-    let correct = test.Click(index);
-
-    //Ждём секунду и обновляем тест
-    setTimeout(Update, 1000);
-}
-}
+export function startTest1() {
+    const test = new Test(questions, results);   //Экземпляр теста
+    createQuiz(test);
+};
