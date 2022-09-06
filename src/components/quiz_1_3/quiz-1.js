@@ -11,7 +11,6 @@ class Test {
         //Добавляем баллы
         let value = this.questions[this.current].click(index);
         this.score += value;
-        console.log(this.score);
         this.next();
     }
 
@@ -100,8 +99,6 @@ const questions =
             ]),
     ];
 
-
-
 //Обновление теста
 function createQuiz(test) {
     const headElem = document.getElementById('quiz__head');
@@ -114,7 +111,7 @@ function createQuiz(test) {
         
         for (let i = 0; i < test.questions[test.current].answers.length; i++) {          //Создаём кнопки для новых вариантов ответов
             let btn = document.createElement("button");
-            btn.className = "button";
+            btn.className = "quiz__button";
             btn.innerHTML = test.questions[test.current].answers[i].text;
             btn.addEventListener("click", () => {
                 test.click(i);

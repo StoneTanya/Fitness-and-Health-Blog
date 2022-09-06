@@ -9,24 +9,23 @@ class Test {
 
     click(index) {
         //Добавляем баллы
-        let value = this.questions[this.current].Click(index);
+        let value = this.questions[this.current].click(index);
         this.score += value;
-        console.log(this.score);
-        this.Next();
+        this.next();
     }
 
     //Переход к следующему вопросу
     next() {
         this.current++;
         if (this.current >= this.questions.length) {
-            this.End();
+            this.end();
         }
     }
 
     //Если вопросы кончились, проверка результата 
     end() {
         for (let i = 0; i < this.results.length; i++) {
-            if (this.results[i].Check(this.score)) {
+            if (this.results[i].check(this.score)) {
                 this.result = i;
             }
         }
@@ -118,7 +117,7 @@ function createQuiz(test) {
     }
 }
 
-export default function startTest3() {
+export function startTest3() {
     const test = new Test(questions, results);   //Экземпляр теста
-    createQuiz();
+    createQuiz(test);
 };

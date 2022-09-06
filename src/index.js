@@ -3,10 +3,10 @@ import './style.scss';
 import 'bootstrap';
 import template from "./template.html";
 import ComponentTestPurpose from "./components/testPurposeBlock/testPurpose";
-document.body.innerHTML = template;
+// import ComponentNav from "./components/header/nav";
 
-
+document.innerHTML = template;
+// ComponentNav();
 ComponentTestPurpose();
-
 
 
