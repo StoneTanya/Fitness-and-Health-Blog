@@ -1,5 +1,23 @@
 @import "~bootstrap/scss/bootstrap";
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// накидала варианты, что может быть будем использовать, по ходу будем править 
+
+$font-main: serif;      // заменим, как подключим шрифты
+$font-other: 'Roboto';      // заменим, как подключим шрифты
+$back-color-pink:  rgba(255, 230, 226, 1);
+$back-color-header: rgba(48, 48, 48, 1);
+$akcent-color: rgba(240, 156, 150, 1);
+$title-color: #fff;
+$title-size: 2.8rem;
+$subtitle-size: 2rem;
+$menu-size: 0.9rem;
+
 body,
 html {
     width: 100%;
@@ -7,58 +25,43 @@ html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-size: 16px;
-    font-family: helvetica, arial;
-    background: #f9f9f9;
-    color: #111;
 }
 
-.wrapper {
+#quiz__wrapper {
     width: 100%;
     height: 100%;
-    display: table;
-}
-
-.main {
-    display: table-cell;
     vertical-align: middle;
     text-align: center;
+    .quiz__head {
+        font-size: 20pt;
+        margin: 10px;
+        margin-bottom: 50px;
+    }
+    
+    .head__content {
+        padding: 5px;
+    }
+    
+    .quiz__body {
+        margin: 10px;
+    }
+    
+    .quiz__footer {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+    }
+    
+    .footer__content {
+        padding: 5px;
+    }
 }
 
-.quiz-frame {
-    border: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.quiz__head {
-    font-size: 20pt;
-    margin: 10px;
-    margin-bottom: 50px;
-}
-
-.head__content {
-    padding: 5px;
-}
-
-.quiz__body {
-    margin: 10px;
-}
-
-.quiz__footer {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
-}
-
-.footer__content {
-    padding: 5px;
-}
-
-.button {
+.buttons__content button {
     border: 0;
     border-radius: 10px;
-    background: #6477EB;
+    background:  #023A15;
     color: #fff;
     padding: 10px 25px;
     width: 70%;
@@ -66,4 +69,18 @@ html {
     display: block;
     margin: 2px auto;
     cursor: pointer;
+}
+
+#test__block {
+    background: rgba(255, 230, 226, 1);
+    padding: 2% 4%;
+}
+
+
+    .test__block_choise button {
+    border: 0;
+    border-radius: 10px;
+    background: rgba(79, 82, 97, 1);
+    color: white;
+    padding: 2% 3%;
 }
