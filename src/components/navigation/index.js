@@ -1,4 +1,4 @@
-import nav from "./nav.html";
+import nav from "./index.html";
 
 export default function ComponentNav() {
     const navDiv = document.getElementById('navigation');
