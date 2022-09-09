@@ -56,15 +56,16 @@ answer.set(
 ); //(000) = 0
 
 function updateQuestionTitle() {
-  console.log(finalMask);
+  console.log("finalMask: " + finalMask);
 
   let title = document.getElementById("question");
   let leftButton = document.getElementById("question-left");
   let rightButton = document.getElementById("question-right");
 
-  if (questionIndex <= questions.length) {
+  if (questionIndex < questions.length) {
     let question = questions[questionIndex];
-    console.log(questions[2]);
+    console.log(question);
+
     title.innerHTML = question.title; //выводим вопрос
     leftButton.value = question.left; // меняем текст вопроса слева
     rightButton.value = question.right; // меняем текст вопроса справа
@@ -75,8 +76,16 @@ function updateQuestionTitle() {
     let result = document.getElementById("result");
     result.innerHTML = answer.get(finalMask);
   }
+}
+
+// document.addEventListener("DOMContentLoaded", updateQuestionTitle); // при загрузке страницы выводим вопрос 1 с индексом [0]
+
+export function startTest2() {
+  let leftButton = document.getElementById("question-left");
+  let rightButton = document.getElementById("question-right");
+
   //переключение вопросов при нажатии на кнопку слева:
-  leftButton.addEventListener("click", function () {
+  leftButton.onclick = function () {
     if (questionIndex > questions.length) {
       return;
     }
@@ -85,21 +94,17 @@ function updateQuestionTitle() {
 
     questionIndex++;
     updateQuestionTitle();
-  });
+  };
 
   //переключение вопросов при нажатии на кнопку справа:
-  rightButton.addEventListener("click", function () {
+  rightButton.onclick = function () {
     if (questionIndex > questions.length) {
       return;
     }
 
     questionIndex++;
     updateQuestionTitle();
-  });
-}
+  };
 
-// document.addEventListener("DOMContentLoaded", updateQuestionTitle); // при загрузке страницы выводим вопрос 1 с индексом [0]
-
-export function startTest2() {
-  updateQuestionTitle(questions, result);
+  updateQuestionTitle();
 }
