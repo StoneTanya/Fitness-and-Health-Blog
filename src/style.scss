@@ -88,3 +88,89 @@ $menu-size: 0.9rem;
     color: white;
     padding: 2% 3%;
 }
+
+
+
+// slider
+/* Расположите контейнер изображения (необходимо расположить стрелки влево и вправо) */
+.sliderContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;                     // Скрываем фон и сам попап
+    pointer-events: none;          // Запрещаем ему быть целью событий
+    transition: 0.5s all;
+}
+
+.sliderContainer.active {         // При добавлении класса 'active'
+    opacity: 1;                  // Показываем фон и попап
+    pointer-events: all;         // Возвращаем события
+    transition: 0.5s all;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);   // Центрируем и масштабируем в 0 само окно
+    background-color: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);    // Так же центрируем и плавно увеличиваем
+    transition: 0.5s all;
+}
+
+.close-popup {
+    position: absolute;
+    top: 2%;
+    right: 10%;
+    cursor: pointer;
+    width: 3%;
+}
+
+/* Далее код для стилизации  */
+/* Скрыть изображения по умолчанию */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.sliderContainer div:first-child {
+    display: block;
+}
+
+.sliderContainer div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Вперед и предыдущие кнопки */
+#prev,
+#next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+}
+
+/* Позиция "next кнопка" на право */
+#next {
+    right: 0;
+}
+
+/* При наведении курсора добавьте черный цвет фона с небольшим количеством прозрачного */
+#prev:hover,
+#next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
