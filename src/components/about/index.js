@@ -1,5 +1,5 @@
 import about from "./index.html";
-import mainPhoto from "../../photo/IMG_4466.jpg";
+import mainPhoto from "../../photo/IMG_9600.JPG";
 
 export default function ComponentAbout() {
     const aboutDiv = document.getElementById('about');
