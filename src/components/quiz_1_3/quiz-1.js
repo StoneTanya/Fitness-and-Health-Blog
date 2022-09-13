@@ -103,7 +103,6 @@ const questions =
 function createQuiz(test) {
     const headElem = document.getElementById('quiz__head');
     const buttonsElem = document.getElementById('quiz__buttons');
-    const pagesElem = document.getElementById('quiz__pages');
     //Проверяем, есть ли ещё вопросы
     if (test.current < test.questions.length) {
         headElem.innerHTML = test.questions[test.current].text;   //Если есть, меняем вопрос в заголовке
@@ -119,15 +118,25 @@ function createQuiz(test) {
             });
             buttonsElem.appendChild(btn);
         }
-        pagesElem.innerHTML = (test.current + 1) + " / " + test.questions.length;   //Выводим номер текущего вопроса
 
     } else {
         //Если это конец, то выводим результат
         buttonsElem.innerHTML = "";
         headElem.innerHTML = test.results[test.result].text;
+        
+        let adviseField = document.getElementById('quiz__advise');
+        let out = '';
+            out +=
+                `<div id="quiz__advise">
+                <div id="quiz__advise__content">
+                    <h3>Хотите уточнить результат?</h3>   
+                    <p>Вы можете <a href="#" id="open-popup">скачать чек-лист «11 вопросов, которые нужно задать себе до тренировки»</a></p>
+                    <p><a href="#" id="sign_up_consult">Записаться на консультацию</a></p>
+                    </div>
+            </div>`;
+            adviseField.innerHTML = out;
     }
 }
-
 export function startTest1() {
     const test = new Test(questions, results);   //Экземпляр теста
     createQuiz(test);

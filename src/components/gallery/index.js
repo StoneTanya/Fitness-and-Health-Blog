@@ -1,8 +1,8 @@
-import slider from "./index.html";
+// import slider from "./slider.html";
 
 export function SertSlider() {
-    const sliderDiv = document.getElementById('sert__slider');
-    sliderDiv.innerHTML = slider;
+    // const sliderDiv = document.getElementById('sert__slider');
+    // sliderDiv.innerHTML = slider;
 
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
@@ -28,24 +28,3 @@ export function SertSlider() {
     });
 };
 
-export function PopupSlider() {
-    let popupBack = document.querySelector(".popup__back");   //фон окна
-    let popup = document.querySelector(".popup");             //само окно
-    let closePopup = document.querySelector('.close-popup');
-
-    popupBack.classList.add('active');          // Добавляем класс 'active' для фона
-    popup.classList.add('active');              // И для самого окна
-
-    closePopup.addEventListener('click',() => {         // Вешаем обработчик на крестик
-        popupBack.classList.remove('active');                // Убираем активный класс с фона
-        popup.classList.remove('active');                    // И с окна
-    });
-
-    document.addEventListener('click', (e) => {             // Вешаем обработчик на весь документ
-        if(e.target === popupBack) {                         // Если цель клика - фон, то:
-            popupBack.classList.remove('active');              // Убираем активный класс с фона
-            popup.classList.remove('active');                // И с окна
-        }
-    });
-
-};

@@ -1,18 +1,16 @@
-import nav from "./index.html";
-import {SertSlider} from "../gallery/index";
-import {PopupSlider} from "../gallery/index";
+import nav from "./navigation.html";
+// import {Popup} from "../popup/popup";
 
 export default function ComponentNav() {
     const navDiv = document.getElementById('navigation');
     navDiv.innerHTML = nav;
 };
 
-export function ComponentSliderPopup() {
-    let openSlider = document.getElementById('open-popup');
-    
-    openSlider.addEventListener('click', function(e) {            
-        e.preventDefault();                  
-        PopupSlider();            // И для самого окна
-    });
-    SertSlider();
-};
+// export function ComponentSliderPopup() {
+//     let openPopup = document.querySelector('.open-popup');
+
+//     openPopup.addEventListener('click', function(e) {            
+//             e.preventDefault();                  
+//             Popup();            // И для самого окна
+//         })
+// };
