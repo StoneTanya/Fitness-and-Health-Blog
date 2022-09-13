@@ -5,15 +5,22 @@ import template from "./template.html";
 import ComponentTestPurpose from "./components/testPurposeBlock/testPurpose";
 import ComponentNav from "./components/navigation";
 import ComponentAbout from "./components/about";
-import {ComponentSliderPopup} from "./components/navigation";
+import {startPopup} from "./components/popup/popup";
+import {SertSlider} from "./components/gallery/index";
+
+// import {ComponentPopup} from "./components/testPurposeBlock/testPurpose";
 // import ComponentFooter from "./components/footer";
 import ComponentStartTest from "./components/startTest";
+
+
 document.innerHTML = template;
 ComponentNav();
 ComponentAbout();
 ComponentTestPurpose();
 ComponentStartTest();
-ComponentSliderPopup();
+startPopup();
+SertSlider();
+// ComponentPopup();
 // ComponentFooter();
 
 

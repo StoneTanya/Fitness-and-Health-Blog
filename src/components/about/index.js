@@ -1,4 +1,4 @@
-import about from "./index.html";
+import about from "./about.html";
 import mainPhoto from "../../photo/IMG_9600.JPG";
 
 export default function ComponentAbout() {

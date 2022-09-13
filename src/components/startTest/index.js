@@ -1,5 +1,5 @@
 import startTest from "./index.html";
-import ComponentTestPurpose from "../testPurposeBlock/testPurpose";
+// import ComponentTestPurpose from "../testPurposeBlock/testPurpose";
 
 export default function ComponentStartTest() {
   const testStart = document.getElementById("test_start");
@@ -9,7 +9,8 @@ export default function ComponentStartTest() {
   let testPurposeDiv = document.getElementById("test__block");
   testPurposeDiv.style.display = "none";
 
-  buttonStartTest.addEventListener("click", function () {
+  buttonStartTest.addEventListener("click", function (e) {
+    e.preventDefault();
     testPurposeDiv.style.display = "block";
   });
 }

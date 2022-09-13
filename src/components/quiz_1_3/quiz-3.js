@@ -93,27 +93,40 @@ const questions = [
 function createQuiz(test) {
     const headElem = document.getElementById('quiz__head');
     const buttonsElem = document.getElementById('quiz__buttons');
-    const pagesElem = document.getElementById('quiz__pages');
+
     //Проверяем, есть ли ещё вопросы
     if (test.current < test.questions.length) {
         headElem.innerHTML = test.questions[test.current].text;   //Если есть, меняем вопрос в заголовке
         buttonsElem.innerHTML = "";               //Удаляем старые варианты ответов
-        
+
         for (let i = 0; i < test.questions[test.current].answers.length; i++) {          //Создаём кнопки для новых вариантов ответов
             let btn = document.createElement("button");
             btn.className = "button";
             btn.innerHTML = test.questions[test.current].answers[i].text;
-            btn.addEventListener("click", () => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
                 test.click(i);
                 createQuiz(test);
             })
             buttonsElem.appendChild(btn);
         }
-        pagesElem.innerHTML = (test.current + 1) + " / " + test.questions.length;   //Выводим номер текущего вопроса
     } else {
         //Если это конец, то выводим результат
         buttonsElem.innerHTML = "";
         headElem.innerHTML = test.results[test.result].text;
+
+        let adviseField = document.getElementById('quiz__advise');
+        let out = '';
+        out +=
+            `<div id="quiz__advise">
+                <div id="quiz__advise__content">
+                    <h3>Хотите уточнить результат?</h3>   
+                    <p>Вы можете <a href="#" id="sign_up_consult">Записаться на консультацию</a></p>
+                    <h3>Хотите больше знать о том, как тренировки влияют на фигуру?</h3>   
+                    <p>Вот <a href="#" id="article_vew">несколько интересных статей об этом</a></p>
+                    </div>
+            </div>`;
+        adviseField.innerHTML = out;
     }
 }
 
