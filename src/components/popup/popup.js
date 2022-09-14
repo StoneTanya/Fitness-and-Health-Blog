@@ -1,7 +1,10 @@
 
-import popupSlider from "../gallery/slider.html"
-import popupQuiz1 from "../quiz_1_3/popUpCheckList.html";
-document.getElementById("check__list__popup").innerHTML = popupQuiz1;
+import popupSlider from "../gallery/slider.html";
+import footerDip from "../footer/footer.html";
+
+
+// import popupQuiz1 from "../quiz_1_3/popUpCheckList.html";
+// document.getElementById("check__list__popup").innerHTML = popupQuiz1;
 document.getElementById("sert__slider").innerHTML = popupSlider;
 
 export function startPopup() {
@@ -9,6 +12,7 @@ export function startPopup() {
     let popup = document.querySelector(".popup");             //само окно
     let closePopup = document.querySelector('.close-popup');
     let openPopup = document.querySelectorAll('.open-popup');
+    console.log(openPopup)
 
     openPopup.forEach((link) => {
         link.addEventListener('click', (e) => {
