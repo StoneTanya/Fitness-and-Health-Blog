@@ -1,7 +1,10 @@
 
-import popupSlider from "../gallery/slider.html"
-import popupQuiz1 from "../quiz_1_3/popUpCheckList.html";
-document.getElementById("check__list__popup").innerHTML = popupQuiz1;
+import popupSlider from "../gallery/slider.html";
+import footerDip from "../footer/footer.html";
+
+
+// import popupQuiz1 from "../quiz_1_3/popUpCheckList.html";
+// document.getElementById("check__list__popup").innerHTML = popupQuiz1;
 document.getElementById("sert__slider").innerHTML = popupSlider;
 
 export function startPopup() {

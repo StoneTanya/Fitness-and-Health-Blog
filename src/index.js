@@ -7,11 +7,9 @@ import ComponentNav from "./components/navigation";
 import ComponentAbout from "./components/about";
 import { startPopup } from "./components/popup/popup";
 import { SertSlider } from "./components/gallery/index";
-import ComponentArticles from "./components/articles/index";
-
-
 import ComponentFooter from "./components/footer";
 import ComponentStartTest from "./components/startTest";
+import ComponentArticlesPurpose from "./components/articlesPurposeBlock/index";
 
 document.innerHTML = template;
 ComponentNav();
@@ -20,5 +18,5 @@ ComponentTestPurpose();
 ComponentStartTest();
 startPopup();
 SertSlider();
-ComponentArticles();
+ComponentArticlesPurpose();
 ComponentFooter();

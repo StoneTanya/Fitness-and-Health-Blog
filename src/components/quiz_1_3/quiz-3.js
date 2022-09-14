@@ -133,7 +133,7 @@ function createQuiz(test) {
                     <h3>Хотите уточнить результат?</h3>   
                     <p>Вы можете <a href="#" id="sign_up_consult">Записаться на консультацию</a></p>
                     <h3>Хотите больше знать о том, как тренировки влияют на фигуру?</h3>   
-                    <p>Вот <a href="#" id="article_vew">несколько интересных статей об этом</a></p>
+                    <p>Вот <a href="#articles_figure" id="___">несколько интересных статей об этом</a></p>
                     </div>
             </div>`;
         adviseField.innerHTML = out;
