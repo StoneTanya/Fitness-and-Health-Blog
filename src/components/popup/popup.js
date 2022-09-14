@@ -9,6 +9,7 @@ export function startPopup() {
     let popup = document.querySelector(".popup");             //само окно
     let closePopup = document.querySelector('.close-popup');
     let openPopup = document.querySelectorAll('.open-popup');
+    console.log(openPopup)
 
     openPopup.forEach((link) => {
         link.addEventListener('click', (e) => {

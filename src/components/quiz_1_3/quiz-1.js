@@ -101,7 +101,7 @@ const questions =
 
 //Обновление теста
 function createQuiz(test) {
-    const headElem = document.getElementById('quiz__head');
+    const headElem = document.getElementById('head__content');
     const buttonsElem = document.getElementById('quiz__buttons');
     //Проверяем, есть ли ещё вопросы
     if (test.current < test.questions.length) {

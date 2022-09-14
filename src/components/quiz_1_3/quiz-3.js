@@ -91,7 +91,7 @@ const questions = [
 
 //Обновление теста
 function createQuiz(test) {
-    const headElem = document.getElementById('quiz__head');
+    const headElem = document.getElementById('head__content');
     const buttonsElem = document.getElementById('quiz__buttons');
 
     //Проверяем, есть ли ещё вопросы
@@ -114,7 +114,17 @@ function createQuiz(test) {
         //Если это конец, то выводим результат
         buttonsElem.innerHTML = "";
         headElem.innerHTML = test.results[test.result].text;
+        if (results.value === "11" | "01" | "00") {
+            let addField = document.getElementById('add');
+            let add = '';
+            add +=
+                `<div id="quiz__advise__content">
+                <p>Вы можете <a href="#" id="open-popup">скачать чек-лист «11 вопросов, которые нужно задать себе до тренировки»</a></p>
+                </div>`;
+                addField.innerHTML = add;
+        }
 
+        //блок с "советами" и ссылками на статьи и запись на консультацию
         let adviseField = document.getElementById('quiz__advise');
         let out = '';
         out +=
@@ -129,6 +139,10 @@ function createQuiz(test) {
         adviseField.innerHTML = out;
     }
 }
+
+// function checkResult() {
+
+// };
 
 export function startTest3() {
     const test = new Test(questions, results);   //Экземпляр теста

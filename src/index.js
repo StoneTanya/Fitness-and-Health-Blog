@@ -8,8 +8,8 @@ import ComponentAbout from "./components/about";
 import {startPopup} from "./components/popup/popup";
 import {SertSlider} from "./components/gallery/index";
 
-// import {ComponentPopup} from "./components/testPurposeBlock/testPurpose";
-// import ComponentFooter from "./components/footer";
+
+import ComponentFooter from "./components/footer";
 import ComponentStartTest from "./components/startTest";
 
 
@@ -20,7 +20,6 @@ ComponentTestPurpose();
 ComponentStartTest();
 startPopup();
 SertSlider();
-// ComponentPopup();
-// ComponentFooter();
+ComponentFooter();
 
 
