@@ -74,25 +74,24 @@ function updateQuestionTitle() {
     let result = document.getElementById("result");
     result.innerHTML = answer.get(finalMask);
 
-    let adviseField = document.getElementById('quiz__advise');
-        let out = '';
-            out +=
-                `<div id="quiz__advise">
+    let adviseField = document.getElementById("quiz__advise");
+    adviseField.innerHTML = `
                 <div id="quiz__advise__content">
                     <h3>Хотите уточнить результат?</h3>   
                     <p>Вы можете <a href="#" id="sign_up_consult">Записаться на консультацию</a></p>
                     <h3>Хотите больше знать о тренировках для ментального здоровья?</h3>   
                     <p>Вот <a href="#" id="article_vew">несколько интересных статей об этом.</a></p>
-                    </div>
-            </div>`;
-            adviseField.innerHTML = out;
-            return
+                </div>`;
+    return;
   }
-};
+}
 
 // document.addEventListener("DOMContentLoaded", updateQuestionTitle); // при загрузке страницы выводим вопрос 1 с индексом [0]
 
 export function startTest2() {
+  questionIndex = 0;
+  finalMask = 0;
+
   let leftButton = document.getElementById("question-left");
   let rightButton = document.getElementById("question-right");
 
@@ -115,4 +114,4 @@ export function startTest2() {
     updateQuestionTitle();
   };
   updateQuestionTitle();
-};
+}

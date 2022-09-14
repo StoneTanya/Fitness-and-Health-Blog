@@ -18,7 +18,6 @@ export default function ComponentTestPurpose() {
   let buttonMedicine = document.getElementById("button__medicine");
   const quizDiv = document.getElementById("quiz__wrapper");
 
-  
   buttonHobby.addEventListener("click", function (e) {
     e.preventDefault();
     testPurposeDiv.style.display = "none";
@@ -26,7 +25,7 @@ export default function ComponentTestPurpose() {
     startTest1();
     // startPopup();
   });
-  
+
   buttonStress.addEventListener("click", function (e) {
     e.preventDefault();
     testPurposeDiv.style.display = "none";
@@ -46,9 +45,4 @@ export default function ComponentTestPurpose() {
     testPurposeDiv.style.display = "none";
     quizDiv.innerHTML = quiz_4;
   });
-};
-
-
-
-
-
+}
