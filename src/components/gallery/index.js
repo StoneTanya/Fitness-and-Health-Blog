@@ -1,4 +1,9 @@
+import content from "./slider.html";
+import { startPopup } from "../popup/popup";
+
+
 export function SertSlider() {
+    startPopup(content);
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
     
