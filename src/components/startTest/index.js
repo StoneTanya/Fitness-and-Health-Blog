@@ -12,5 +12,15 @@ export default function ComponentStartTest() {
   buttonStartTest.addEventListener("click", function (e) {
     e.preventDefault();
     testPurposeDiv.style.display = "block";
+
+    let result = document.getElementById("result");
+    result.innerHTML = "";
+
+    let advise = document.getElementById("quiz__advise");
+    advise.innerHTML = "";
+    console.log("advise " + advise);
+
+    let question = document.getElementById("quiz__wrapper");
+    question.innerHTML = "";
   });
 }
