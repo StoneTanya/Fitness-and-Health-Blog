@@ -115,7 +115,7 @@ $menu-size: 0.9rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);   // Центрируем и масштабируем в 0 само окно
+    // transform: translate(-50%, -50%) scale(0);   // Центрируем и масштабируем в 0 само окно
     // background-color: #fff;
     width: 400px;
     padding: 25px;
@@ -123,7 +123,7 @@ $menu-size: 0.9rem;
 }
 
 .popup.active {
-    transform: translate(-50%, -50%) scale(1);    // Так же центрируем и плавно увеличиваем
+    // transform: translate(-50%, -50%) scale(1);    // Так же центрируем и плавно увеличиваем
     transition: 0.5s all;
 }
 

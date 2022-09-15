@@ -1,3 +1,6 @@
+import { startPopup } from "../popup/popup";
+import checkListContent from "./popUpCheckList.html";
+
 class Test {
     constructor(questions, results) {
         this.questions = questions; //Массив с вопросами
@@ -126,15 +129,20 @@ function createQuiz(test) {
         
         let adviseField = document.getElementById('quiz__advise');
         let out = '';
-            out +=
-                `<div id="quiz__advise">
-                <div id="quiz__advise__content">
-                    <h3>Хотите уточнить результат?</h3>   
-                    <p>Вы можете <a href="#" class="open-popup">скачать чек-лист «11 вопросов, которые нужно задать себе до тренировки»</a></p>
-                    <p><a href="#" class="sign_up">Записаться на консультацию</a></p>
-                    </div>
-            </div>`;
-            adviseField.innerHTML = out;
+        out +=
+            `<div id="quiz__advise">
+            <div id="quiz__advise__content">
+                <h3>Хотите уточнить результат?</h3>   
+                <p>Вы можете <a href="#" id="openCheckList">скачать чек-лист «11 вопросов, которые нужно задать себе до тренировки»</a></p>
+                <p><a href="#" class="sign_up">Записаться на консультацию</a></p>
+                </div>
+        </div>`;
+        adviseField.innerHTML = out;
+        console.log(adviseField)
+        document.getElementById("openCheckList").addEventListener("click", (event) => {
+            event.preventDefault();
+            startPopup(checkListContent);
+        })
     }
 }
 export function startTest1() {

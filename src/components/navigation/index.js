@@ -1,9 +1,14 @@
 import nav from "./navigation.html";
-// import {Popup} from "../popup/popup";
+import { SertSlider } from "../gallery/index";
+
 
 export default function ComponentNav() {
     const navDiv = document.getElementById('navigation');
     navDiv.innerHTML = nav;
+    navDiv.querySelector(".open-popup").addEventListener("click", (event) => {
+        event.preventDefault();
+        SertSlider();
+    })
 };
 
 // export function ComponentSliderPopup() {
