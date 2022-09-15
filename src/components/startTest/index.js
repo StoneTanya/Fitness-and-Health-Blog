@@ -14,13 +14,24 @@ export default function ComponentStartTest() {
     testPurposeDiv.style.display = "block";
 
     let result = document.getElementById("result");
-    result.innerHTML = "";
+    if (result != null) {
+      result.innerHTML = "";
+    }
 
     let advise = document.getElementById("quiz__advise");
     advise.innerHTML = "";
-    console.log("advise " + advise);
 
     let question = document.getElementById("quiz__wrapper");
     question.innerHTML = "";
+
+    let headContent = document.getElementById("head__content");
+    if (headContent != null) {
+      headContent.innerHTML = "";
+    }
+
+    let quizButtons = document.getElementById("quiz__buttons");
+    if (quizButtons != null) {
+      quizButtons.innerHTML = "";
+    }
   });
 }
