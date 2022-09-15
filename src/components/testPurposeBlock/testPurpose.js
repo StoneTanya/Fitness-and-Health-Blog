@@ -6,7 +6,6 @@ import testHobby from "../quiz_1_3/quiz_wrapper.html";
 import { startTest1 } from "../quiz_1_3/quiz-1";
 import { startTest2 } from "../quiz_1_3/quiz-2";
 import { startTest3 } from "../quiz_1_3/quiz-3";
-// import { startPopup } from "../popup/popup";
 
 export default function ComponentTestPurpose() {
   const testPurposeDiv = document.getElementById("test__block");
@@ -24,7 +23,6 @@ export default function ComponentTestPurpose() {
     testPurposeDiv.style.display = "none";
     quizDiv.innerHTML = testHobby;
     startTest1();
-    // startPopup();
   });
   
   buttonStress.addEventListener("click", function (e) {

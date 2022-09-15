@@ -86,7 +86,7 @@ function updateQuestionTitle() {
                 `<div id="quiz__advise">
                 <div id="quiz__advise__content">
                     <h3>Хотите уточнить результат?</h3>   
-                    <p>Вы можете <a href="#" id="sign_up_consult">Записаться на консультацию</a></p>
+                    <p>Вы можете <a href="#" class="sign_up">Записаться на консультацию</a></p>
                     <h3>Хотите больше знать о тренировках для ментального здоровья?</h3>   
                     <p>Вот <a href="#" id="article_vew">несколько интересных статей об этом.</a></p>
                     </div>
