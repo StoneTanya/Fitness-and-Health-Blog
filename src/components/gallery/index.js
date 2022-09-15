@@ -1,9 +1,4 @@
-// import slider from "./slider.html";
-
 export function SertSlider() {
-    // const sliderDiv = document.getElementById('sert__slider');
-    // sliderDiv.innerHTML = slider;
-
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
     
