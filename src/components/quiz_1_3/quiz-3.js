@@ -123,14 +123,15 @@ function createQuiz(test) {
         
         //блок с "советами" и ссылками на статьи и запись на консультацию
         let adviseField = document.getElementById('quiz__advise');
+
         let out = '';
         out +=
             `<div id="quiz__advise">
                 <div id="quiz__advise__content">
                     <h3>Хотите уточнить результат?</h3>   
-                    <p>Вы можете <a href="#" id="sign_up_consult">Записаться на консультацию</a></p>
+                    <p>Вы можете <a href="#" class="sign_up">Записаться на консультацию</a></p>
                     <h3>Хотите больше знать о том, как тренировки влияют на фигуру?</h3>   
-                    <p>Вот <a href="#articles_figure" id="___">несколько интересных статей об этом</a></p>
+                    <p>Вот <a href="#articles_figure">несколько интересных статей об этом</a></p>
                     </div>
             </div>`;
         adviseField.innerHTML = out;
