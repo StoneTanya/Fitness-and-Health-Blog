@@ -6,7 +6,7 @@ export default function ComponentAbout() {
     aboutDiv.innerHTML = about;
     
     const aboutPhoto = new Image();
-    aboutPhoto.className = "col-6";
+    aboutPhoto.className = "col-md-6 col-12";
     aboutPhoto.src = mainPhoto;
     aboutDiv.appendChild(aboutPhoto);
 }

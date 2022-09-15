@@ -101,7 +101,7 @@ const questions =
 
 //Обновление теста
 function createQuiz(test) {
-    const headElem = document.getElementById('quiz__head');
+    const headElem = document.getElementById('head__content');
     const buttonsElem = document.getElementById('quiz__buttons');
     //Проверяем, есть ли ещё вопросы
     if (test.current < test.questions.length) {
@@ -130,8 +130,8 @@ function createQuiz(test) {
                 `<div id="quiz__advise">
                 <div id="quiz__advise__content">
                     <h3>Хотите уточнить результат?</h3>   
-                    <p>Вы можете <a href="#" id="open-popup">скачать чек-лист «11 вопросов, которые нужно задать себе до тренировки»</a></p>
-                    <p><a href="#" id="sign_up_consult">Записаться на консультацию</a></p>
+                    <p>Вы можете <a href="#" class="open-popup">скачать чек-лист «11 вопросов, которые нужно задать себе до тренировки»</a></p>
+                    <p><a href="#" class="sign_up">Записаться на консультацию</a></p>
                     </div>
             </div>`;
             adviseField.innerHTML = out;

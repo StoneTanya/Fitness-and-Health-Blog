@@ -1,14 +1,15 @@
-
-import popupSlider from "../gallery/slider.html"
+import popupSlider from "../gallery/slider.html";
 import popupQuiz1 from "../quiz_1_3/popUpCheckList.html";
 document.getElementById("check__list__popup").innerHTML = popupQuiz1;
 document.getElementById("sert__slider").innerHTML = popupSlider;
+
 
 export function startPopup() {
     let popupBack = document.querySelector(".popup__back");   //фон окна
     let popup = document.querySelector(".popup");             //само окно
     let closePopup = document.querySelector('.close-popup');
     let openPopup = document.querySelectorAll('.open-popup');
+    console.log(openPopup)
 
     openPopup.forEach((link) => {
         link.addEventListener('click', (e) => {
@@ -17,7 +18,8 @@ export function startPopup() {
             popup.classList.add('active');
         })
     });
-    closePopup.addEventListener('click', () => {         // Вешаем обработчик на крестик
+    closePopup.addEventListener('click', (e) => {   // Вешаем обработчик на крестик
+        e.preventDefault();
         popupBack.classList.remove('active');                // Убираем активный класс с фона
         popup.classList.remove('active');                    // И с окна
     });
@@ -27,6 +29,13 @@ export function startPopup() {
             popupBack.classList.remove('active');              // Убираем активный класс с фона
             popup.classList.remove('active');                // И с окна
         }
+    });
+};
+
+export function searchPopup() {
+    document.addEventListener('DOMContentLoaded', (event) => {
+        event.preventDefault();
+        startPopup();
     });
 }
 

@@ -20,8 +20,9 @@ $menu-size: 0.9rem;
 
 
 #about {
+    font-size: 1.2rem;
     img {
-        max-width: 50%;
+        max-width: 40%;
     }
 }
 
@@ -40,10 +41,11 @@ $menu-size: 0.9rem;
         font-size: 20pt;
         margin: 10px;
         margin-bottom: 50px;
+        background-color: $back-color-pink;
     }
     
-    .head__content {
-        padding: 5px;
+    #head__content {
+        padding: 3%;
     }
     
     .quiz__body {
@@ -80,8 +82,7 @@ $menu-size: 0.9rem;
     padding: 2% 4%;
 }
 
-
-    .test__block_choise button {
+.test__block_choise button {
     border: 0;
     border-radius: 10px;
     background: rgba(79, 82, 97, 1);
@@ -107,6 +108,7 @@ $menu-size: 0.9rem;
     opacity: 1;                  // Показываем фон и попап
     pointer-events: all;         // Возвращаем события
     transition: 0.5s all;
+    background-color:  rgba(255, 230, 226, 0.459);
 }
 
 .popup {
@@ -127,7 +129,7 @@ $menu-size: 0.9rem;
 
 .close-popup {
     position: absolute;
-    top: 2%;
+    top: 5%;
     right: 10%;
     cursor: pointer;
     width: 3%;
@@ -159,16 +161,52 @@ $menu-size: 0.9rem;
     top: 50%;
     width: auto;
     margin-top: -22px;
+    padding-top: 1%;
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-bottom: 1%;
+    border-radius: 20px;
+    border: none;
 }
 
 /* Позиция "next кнопка" на право */
 #next {
-    right: 0;
+    right: -15%;
+}
+
+#prev {
+    left: -15%;
 }
 
 /* При наведении курсора добавьте черный цвет фона с небольшим количеством прозрачного */
 #prev:hover,
 #next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: $akcent-color;
 }
 
+#footer {
+    background-color: $back-color-header;
+
+    .footer-content {
+        padding: 5%;
+        a {
+            text-decoration: none;
+            color: #fff;
+            img {
+                width: 15%;
+            }
+        }
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.card {
+    position: inherit;
+}
