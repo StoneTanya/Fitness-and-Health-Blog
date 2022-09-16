@@ -1,3 +1,7 @@
+import {ComponentArticlesFigure} from "../articles/index";
+import cheatListGymContent from "./cheatGym.html";
+import { startPopup } from "../popup/popup";
+
 class Test {
     constructor(questions, results) {
         this.questions = questions; //Массив с вопросами
@@ -70,7 +74,7 @@ class Result {
 let gymCheat = '';
     gymCheat +=
     `<div id="">
-    <p>Вы можете <a href="#" id="open-popup">скачать шпаргалку по тренажерке</a></p>
+    <p>Вы можете <a href="#" id="openCheatGym">скачать шпаргалку по тренажерке</a></p>
     </div>`;
 
 //Массив с результатами
@@ -131,10 +135,20 @@ function createQuiz(test) {
                     <h3>Хотите уточнить результат?</h3>   
                     <p>Вы можете <a href="#" class="sign_up">Записаться на консультацию</a></p>
                     <h3>Хотите больше знать о том, как тренировки влияют на фигуру?</h3>   
-                    <p>Вот <a href="#articles_figure">несколько интересных статей об этом</a></p>
+                    <p>Вот <a href="#articles_figure" id="openArticlesFigure">несколько интересных статей об этом</a></p>
                     </div>
             </div>`;
         adviseField.innerHTML = out;
+
+        document.getElementById("openArticlesFigure").addEventListener("click", (e) => {
+            e.preventDefault();
+            ComponentArticlesFigure();
+        });
+
+        document.getElementById('openCheatGym').addEventListener("click", (e) => {
+            e.preventDefault();
+            startPopup(cheatListGymContent);
+        });
     }
 }
 
