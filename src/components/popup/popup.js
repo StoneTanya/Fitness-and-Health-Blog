@@ -8,8 +8,9 @@ export function startPopup(content) {
     let popupBack = document.querySelector(".popup__back");   //фон окна
     let popup = document.querySelector(".popup");             //само окно
     let closePopup = document.querySelector('.close-popup');
-    let openPopup = document.querySelectorAll('.open-popup');
-    console.log(openPopup)
+    // let openPopup = document.querySelectorAll('.open-popup');
+
+    popup.classList.add('active');
     popupBack.classList.add('active');
     
     closePopup.addEventListener('click', (e) => {   // Вешаем обработчик на крестик
