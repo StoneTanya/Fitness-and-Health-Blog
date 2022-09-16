@@ -117,7 +117,7 @@ $menu-size: 0.9rem;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);   // Центрируем и масштабируем в 0 само окно
     // background-color: #fff;
-    width: 400px;
+    width: 33%;
     padding: 25px;
     transition: 0.5s all;
 }
@@ -127,12 +127,18 @@ $menu-size: 0.9rem;
     transition: 0.5s all;
 }
 
+embed {
+    overflow: hidden;
+    margin: 0;
+    width: 90%;
+}
+
 .close-popup {
     position: absolute;
     top: 5%;
     right: 10%;
     cursor: pointer;
-    width: 3%;
+    width: 2%;
 }
 
 /* Далее код для стилизации  */
@@ -210,3 +216,4 @@ $menu-size: 0.9rem;
 .card {
     position: inherit;
 }
+
