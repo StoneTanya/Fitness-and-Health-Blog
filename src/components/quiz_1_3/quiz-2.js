@@ -1,3 +1,8 @@
+import {ComponentArticlesMental} from "../articles/index";
+import { startPopup } from "../popup/popup";
+import TrainersCheckListContent from "./runTrainers.html";
+import WormUpGuideContent from "./wormUpGuide.html";
+
 let questions = [
   {
     title: "Вы хотели бы тренироваться в компании или самостоятельно?",
@@ -24,7 +29,7 @@ let finalMask = 0; //двоичный код результата
 let checkListTrainers = '';
 checkListTrainers +=
     `<div id="">
-    <p>Вы можете <a href="#" id="open-popup">скачать чек-лист по выбору беговых кроссовок и разминка перед пробежкой</a></p>
+    <p>Вы можете <a href="#" id="openCheckListTrainers">скачать чек-лист по выбору беговых кроссовок</a> и <a href="#" id="openWormUpGuide">инструкцию</a> по разминке перед пробежкой</p>
 </div>`;
 
 let answer = new Map();
@@ -86,14 +91,26 @@ function updateQuestionTitle() {
                     <h3>Хотите уточнить результат?</h3>   
                     <p>Вы можете <a href="#" class="sign_up">Записаться на консультацию</a></p>
                     <h3>Хотите больше знать о тренировках для ментального здоровья?</h3>   
-                    <p>Вот <a href="#" id="article_vew">несколько интересных статей об этом.</a></p>
+                    <p>Вот <a href="#articles_mental_health" id="openArticlesMentalHealth">несколько интересных статей об этом.</a></p>
                     </div>
             </div>`;
-            adviseField.innerHTML = out;
+
+            document.getElementById("openArticlesMentalHealth").addEventListener("click", (e) => {
+                e.preventDefault();
+                ComponentArticlesMental();
+            });
+
+            document.getElementById('openCheckListTrainers').addEventListener("click", (e) => {
+              e.preventDefault();
+              startPopup(TrainersCheckListContent);
+            });
+
+            document.getElementById('openWormUpGuide').addEventListener("click", (e) => {
+              e.preventDefault();
+              startPopup(WormUpGuideContent);
+            });
   }
 }
-
-// document.addEventListener("DOMContentLoaded", updateQuestionTitle); // при загрузке страницы выводим вопрос 1 с индексом [0]
 
 export function startTest2() {
   questionIndex = 0;
