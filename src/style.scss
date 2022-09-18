@@ -210,3 +210,38 @@ $menu-size: 0.9rem;
 .card {
     position: inherit;
 }
+
+//стили для статей:
+
+.article__text_hidden {
+    max-height: 5vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.read_more {
+    position: absolute;
+}
+
+// .read_more:checked~.article__text_hidden {
+//     max-height: none;
+// }
+
+// .read_more~.read_more__button:before {
+//     content: "Читать далее »";
+// }
+
+// .read_more:checked~.read_more__button:before {
+//     content: "Свернуть «";
+// }
+
+.read_more {
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 1% 2%;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    background-color: $akcent-color;
+}
