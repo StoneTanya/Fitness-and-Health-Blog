@@ -8,9 +8,11 @@ import ComponentAbout from "./components/about";
 import ComponentFooter from "./components/footer";
 import ComponentStartTest from "./components/startTest";
 import ComponentArticlesPurpose from "./components/articlesPurposeBlock/index";
+import ComponentIntro from "./components/intro/intro";
 
 document.innerHTML = template;
 ComponentNav();
+ComponentIntro();
 ComponentAbout();
 ComponentTestPurpose();
 ComponentStartTest();
