@@ -250,3 +250,119 @@ $menu-size: 0.9rem;
 .card {
     position: inherit;
 }
+
+//стили для статей:          (нужно будет почистить)
+
+.articles__content {
+    position: relative;
+    counter-increment: practices__content;
+    overflow: hidden;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+.articles__content>.articles__summary {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-rows: 20px calc(10px*2) 10px;
+    height: 110px;
+    padding: 5px;
+    padding-bottom: 0;
+    background-color: rgba(114, 92, 92, 0.1);
+}
+
+.articles__content>.articles__summary::before {
+    grid-row-start: 1;
+    content: counter(practices__content);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    font-family: "Spot Mono",monospace;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.block-code::before {
+    margin-bottom: 0.3em;
+    display: block;
+    width: max-content;
+    padding: 0.45em 0.9em 0.25em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: .6em;
+    line-height: 120%;
+    letter-spacing: .025em;
+    background-color: rgba(116, 87, 87, 0.1);
+    border-radius: 2em;
+    transition: opacity .2s;
+}
+
+.articles__content::after {
+    content: " ";
+    display: block;
+    position: relative;
+    height: 100px;
+    background: linear-gradient(0deg, rgba(104, 111, 110, 0.7) 38%, rgba(114, 92, 92, 0.1));
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.block-article {
+    line-height: 120%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    counter-reset: line-count 0;
+    white-space: normal;
+    display: block;
+}
+
+.block-article__line {
+    position: relative;
+    display: block;
+    min-height: 100px;
+}
+
+.block-article__inner {
+    overflow: auto;
+    overscroll-behavior-x: contain;
+    font-size: 1em;
+    line-height: 120%;
+}
+
+.articles__content--open .articles__toggler {
+    position: sticky;
+    grid-row-start: unset;
+    bottom: 1em;
+    margin-top: unset;
+}
+.articles__content--open {
+    overflow: unset;
+}
+.articles__content--open>.articles__summary {
+    height: auto;
+    grid-template-rows: unset;
+    overflow: unset;
+}
+.articles__content .articles__toggler {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 10px;
+    justify-self: start;
+    padding: 4px 15px;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 10%);
+    border: 0;
+    border-radius: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
