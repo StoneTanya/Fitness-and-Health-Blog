@@ -8,9 +8,9 @@
 
 // накидала варианты, что может быть будем использовать, по ходу будем править 
 
-$font-main: serif;      // заменим, как подключим шрифты
-$font-other: 'Roboto';      // заменим, как подключим шрифты
-$back-color-pink:  rgba(255, 230, 226, 1);
+$font-main: serif; // заменим, как подключим шрифты
+$font-other: 'Roboto'; // заменим, как подключим шрифты
+$back-color-pink: rgba(255, 230, 226, 1);
 $back-color-header: rgba(48, 48, 48, 1);
 $akcent-color: rgba(240, 156, 150, 1);
 $title-color: #fff;
@@ -19,16 +19,41 @@ $subtitle-size: 2rem;
 $menu-size: 0.9rem;
 
 
+#division__line {
+    height: 7vh;
+    background-color: $akcent-color;
+    margin: 0;
+}
+
 #about {
     font-size: 1.2rem;
-    img {
-        max-width: 40%;
+    height: 120vh;
+    background: url(./photo/IMG_9600copy.jpg) no-repeat left;
+    background-size: 65%;
+}
+
+.about__greet {
+    margin-bottom: 5%;
+    line-height: 1.5;
+    span {
+        display: inline;
+        background-color: rgba(240, 156, 150, 0.9);
+        box-shadow: -10px 0 0 rgba(240, 156, 150, 0.9), 10px 0 0 rgba(240, 156, 150, 0.9);
+        padding: 0 10px 0 0;
+        color: #FFFFFF;
+        font-size: 35px;
     }
 }
 
+
 #navigation {
+    padding-top: 1%;
+    padding-bottom: 1%;
     img {
         border: 0;
+    }
+    .nav__name {
+        font-size: 24px;
     }
 }
 
@@ -37,28 +62,29 @@ $menu-size: 0.9rem;
     height: 100%;
     vertical-align: middle;
     text-align: center;
+
     .quiz__head {
         font-size: 20pt;
         margin: 10px;
         margin-bottom: 50px;
         background-color: $back-color-pink;
     }
-    
+
     #head__content {
         padding: 3%;
     }
-    
+
     .quiz__body {
         margin: 10px;
     }
-    
+
     .quiz__advise {
         position: absolute;
         bottom: 0;
         display: block;
         width: 100%;
     }
-    
+
     .quiz__advise__content {
         padding: 5px;
     }
@@ -67,7 +93,7 @@ $menu-size: 0.9rem;
 .buttons__content button {
     border: 0;
     border-radius: 10px;
-    background:  #023A15;
+    background: #023A15;
     color: #fff;
     padding: 10px 25px;
     width: 70%;
@@ -98,32 +124,38 @@ $menu-size: 0.9rem;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0,0,0,0.5);
-    opacity: 0;                     // Скрываем фон и сам попап
-    pointer-events: none;          // Запрещаем ему быть целью событий
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; // Скрываем фон и сам попап
+    pointer-events: none; // Запрещаем ему быть целью событий
     transition: 0.5s all;
 }
 
-.popup__back.active {         // При добавлении класса 'active'
-    opacity: 1;                  // Показываем фон и попап
-    pointer-events: all;         // Возвращаем события
+.popup__back.active {
+    // При добавлении класса 'active'
+    opacity: 1; // Показываем фон и попап
+    pointer-events: all; // Возвращаем события
     transition: 0.5s all;
-    background-color:  rgba(255, 230, 226, 0.459);
+    background-color: rgba(255, 230, 226, 0.459);
 }
 
 .popup {
     position: absolute;
     top: 50%;
     left: 50%;
-    // transform: translate(-50%, -50%) scale(0);   // Центрируем и масштабируем в 0 само окно
-    // background-color: #fff;
-    width: 400px;
+    transform: translate(-50%, -50%) scale(0); // Центрируем и масштабируем в 0 само окно
+    width: 33%;
     padding: 25px;
     transition: 0.5s all;
+
+    embed {
+        width: 100% !important;
+        overflow: hidden;
+        margin: 0;
+    }
 }
 
 .popup.active {
-    // transform: translate(-50%, -50%) scale(1);    // Так же центрируем и плавно увеличиваем
+    transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем
     transition: 0.5s all;
 }
 
@@ -132,7 +164,7 @@ $menu-size: 0.9rem;
     top: 5%;
     right: 10%;
     cursor: pointer;
-    width: 3%;
+    width: 2%;
 }
 
 /* Далее код для стилизации  */
@@ -186,24 +218,32 @@ $menu-size: 0.9rem;
 
 #footer {
     background-color: $back-color-header;
-
     .footer-content {
         padding: 5%;
-        a {
-            text-decoration: none;
-            color: #fff;
-            img {
-                width: 15%;
-            }
-        }
     }
-
     ul {
         list-style-type: none;
     }
-
     a {
         text-decoration: none;
+        img {
+            width: 12%;
+        }
+    }
+}
+
+.telegram-link {
+    text-decoration: none;
+}
+
+.nav__contacts {
+    img {
+        width: 9%;
+        color: $akcent-color;
+    }
+    a {
+        padding: 0;
+        margin: 0;
     }
 }
 

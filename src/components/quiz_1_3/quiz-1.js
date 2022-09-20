@@ -1,5 +1,5 @@
 import { startPopup } from "../popup/popup";
-import checkListContent from "./popUpCheckList.html";
+import checkListContent from "./checkList11Questions.html";
 
 class Test {
     constructor(questions, results) {
@@ -121,7 +121,6 @@ function createQuiz(test) {
             });
             buttonsElem.appendChild(btn);
         }
-
     } else {
         //Если это конец, то выводим результат
         buttonsElem.innerHTML = "";
@@ -138,7 +137,7 @@ function createQuiz(test) {
                 </div>
         </div>`;
         adviseField.innerHTML = out;
-        console.log(adviseField)
+
         document.getElementById("openCheckList").addEventListener("click", (event) => {
             event.preventDefault();
             startPopup(checkListContent);
