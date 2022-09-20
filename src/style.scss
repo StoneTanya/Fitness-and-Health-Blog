@@ -1,8 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
-@font-face {
-    font-family: 'GT Super Display'; 
-    src: url(./fonts/GT-Super-Display-Bold.woff2); 
-}
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Philosopher:wght@700&family=Yeseva+One&display=swap');
 
 *,
 *:before,
@@ -10,20 +7,58 @@
     box-sizing: border-box;
 }
 
-$font-title: 'GT Super Display'; 
-$font-other: 'Roboto';             
-$back-color-pink: rgba(255, 230, 226, 1);
-$back-color-header: rgba(48, 48, 48, 1);
-$akcent-color: rgba(240, 156, 150, 1);
-$title-color: #fff;
+$font-main: 'Philosopher';            
+$back-color:#fbe9e7;
+$accent-color: rgba(240, 156, 150, 1);
+$title-color: #757575;
 $title-size: 2.8rem;
 $subtitle-size: 2rem;
 $menu-size: 0.9rem;
+$btn-color: #90a4ae;
+$content-family: 'Istok Web', sans-serif;
 
+.content {
+    font-family: $content-family;
+}
+
+#my__name {
+    font-family: $font-main;
+}
+
+#navigation {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    height: fit-content;
+    img {
+        border: 0;
+    }
+
+    .nav__name {
+        font-family: $font-main;
+        font-size: 2rem;
+        color: $title-color;
+        line-height: 100%;
+    }
+
+    .nav__contacts {
+        img {
+            width: 9%;
+            color: $accent-color;
+        }
+        a {
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+.telegram-link {
+    text-decoration: none;
+}
 
 #division__line {
     height: 7vh;
-    background-color: $akcent-color;
+    background-color: $back-color;
     margin: 0;
 }
 
@@ -35,47 +70,53 @@ $menu-size: 0.9rem;
     }
 }
 
-.introContent {
-    background:  rgba(48, 48, 48, 0.1);
-    background-size: 56%;
-    span {
-        display: inline;
-        background-color: rgba(240, 156, 150);
-        box-shadow: -10px 0 0 rgba(240, 156, 150), 10px 0 0 rgba(240, 156, 150);
-        padding: 0 10px 0 0;
-        color: #FFFFFF;
-        z-index: 1;
-        font-family: $font-title;
-        font-style: normal; 
-        font-weight: 900; 
-        font-size: 63px; 
-        line-height: 120%; 
-        letter-spacing: 2px;
-    }
+.text_highlited {
+    display: inline;
+    background-color: #fbe9e7;;
+    box-shadow: -10px 0 0 #fbe9e7, 10px 0 0 #fbe9e7;
+    padding: 0 10px 0 0;
+    color: $title-color;
+    z-index: 1;
+    font-family: $font-main;
+    font-style: normal; 
+    font-weight: 900; 
+    font-size: 4rem; 
+    line-height: 125%;
+    margin-top: 50%;
 }
 
-#about {
-    font-size: 1.2rem;
-    // height: 110vh;
-    // background: url(./photo/IMG_9600copy.jpg) no-repeat left;
-    // background-size: 56%;
+.introContent__text{
+    margin-left: -10%;
+}
+
+// .introContent__wrapper::after{
+//     content:"";
+//     display: block;
+//     height: 76px;
+//     background-color: white;
+//     z-index: 1;
+//     margin-right: 57px
+// }
+.about__content {
+    margin-top: 15vh;
+}
+
+.about__test {
+    font-family: $content-family;
+    font-size: 1rem;
+}
+
+.about__image__wrapper {
+    width: 100%;
+    img{
+        max-width: 100%;
+    }
 }
 
 .about__greet {
     margin-bottom: 5%;
     line-height: 1.5;
-    background:  rgba(48, 48, 48, 0.1);
-}
-
-#navigation {
-    padding-top: 1%;
-    padding-bottom: 1%;
-    img {
-        border: 0;
-    }
-    .nav__name {
-        font-size: 24px;
-    }
+    font-size: 2rem;
 }
 
 #quiz__wrapper {
@@ -88,7 +129,6 @@ $menu-size: 0.9rem;
         font-size: 20pt;
         margin: 10px;
         margin-bottom: 50px;
-        background-color: $back-color-pink;
     }
 
     #head__content {
@@ -114,7 +154,7 @@ $menu-size: 0.9rem;
 .buttons__content button {
     border: 0;
     border-radius: 10px;
-    background: #023A15;
+    background: $btn-color;
     color: #fff;
     padding: 10px 25px;
     width: 70%;
@@ -236,11 +276,11 @@ $menu-size: 0.9rem;
 /* При наведении курсора добавьте черный цвет фона с небольшим количеством прозрачного */
 #prev:hover,
 #next:hover {
-    background-color: $akcent-color;
+    background-color: $accent-color;
 }
 
 #footer {
-    background-color: $back-color-header;
+    background-color: $back-color;
     .footer-content {
         padding: 5%;
     }
@@ -255,26 +295,15 @@ $menu-size: 0.9rem;
     }
 }
 
-.telegram-link {
-    text-decoration: none;
-}
-
-.nav__contacts {
-    img {
-        width: 9%;
-        color: $akcent-color;
-    }
-    a {
-        padding: 0;
-        margin: 0;
-    }
-}
-
 .card {
     position: inherit;
 }
 
 //стили для статей:          (нужно будет почистить)
+
+.article_title {
+    font-family: $font-main;
+}
 
 .articles__content {
     position: relative;
@@ -288,7 +317,7 @@ $menu-size: 0.9rem;
     grid-row-start: 2;
     grid-row-end: 4;
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 20px;
     grid-template-rows: 20px calc(10px*2) 10px;
     height: 110px;
     padding: 5px;
@@ -338,7 +367,7 @@ $menu-size: 0.9rem;
 
 .block-article {
     line-height: 120%;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 0px;
     position: relative;
     counter-reset: line-count 0;
@@ -349,7 +378,7 @@ $menu-size: 0.9rem;
 .block-article__line {
     position: relative;
     display: block;
-    min-height: 100px;
+    max-height: fit-content;
 }
 
 .block-article__inner {
@@ -363,7 +392,7 @@ $menu-size: 0.9rem;
     position: sticky;
     grid-row-start: unset;
     bottom: 1em;
-    margin-top: unset;
+    margin-top: 5px;
 }
 .articles__content--open {
     overflow: unset;
@@ -372,6 +401,7 @@ $menu-size: 0.9rem;
     height: auto;
     grid-template-rows: unset;
     overflow: unset;
+    gap: 5px;
 }
 .articles__content .articles__toggler {
     -webkit-appearance: none;
