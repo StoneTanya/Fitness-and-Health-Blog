@@ -301,33 +301,44 @@ $content-family: 'Istok Web', sans-serif;
 
 //стили для статей:          (нужно будет почистить)
 
+.article_figure {
+    counter-increment: article_figure;
+
+}
+
 .article_title {
     font-family: $font-main;
 }
 
 .articles__content {
     position: relative;
-    counter-increment: practices__content;
     overflow: hidden;
     border: 1px solid gray;
     border-radius: 6px;
+    a{
+        text-decoration: none;
+    }
 }
 
 .articles__content>.articles__summary {
     grid-row-start: 2;
     grid-row-end: 4;
     display: grid;
-    grid-gap: 20px;
-    grid-template-rows: 20px calc(10px*2) 10px;
+    grid-gap: 30px;
+    grid-template-rows: 20px 1fr 20px;
     height: 110px;
     padding: 5px;
     padding-bottom: 0;
     background-color: rgba(114, 92, 92, 0.1);
+    p {
+        letter-spacing: normal;
+        line-height: 110%;
+    }
 }
 
 .articles__content>.articles__summary::before {
     grid-row-start: 1;
-    content: counter(practices__content);
+    content: counter(article_figure);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,21 +346,20 @@ $content-family: 'Istok Web', sans-serif;
     width: 30px;
     height: 30px;
     border: 1px solid gray;
-    font-family: "Spot Mono",monospace;
+    font-family: $font-main;
     font-size: 30px;
     font-weight: 400;
 }
 
-.block-code::before {
+.block-article::before {
     margin-bottom: 0.3em;
     display: block;
     width: max-content;
     padding: 0.45em 0.9em 0.25em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: $content-family;
     text-transform: uppercase;
     font-size: .6em;
-    line-height: 120%;
-    letter-spacing: .025em;
+    line-height: 110%;
     background-color: rgba(116, 87, 87, 0.1);
     border-radius: 2em;
     transition: opacity .2s;
@@ -360,14 +370,13 @@ $content-family: 'Istok Web', sans-serif;
     display: block;
     position: relative;
     height: 100px;
-    background: linear-gradient(0deg, rgba(104, 111, 110, 0.7) 38%, rgba(114, 92, 92, 0.1));
-    border-radius: 8px;
+    background: linear-gradient(0deg, rgba(104, 111, 110, 0.5) 38%, rgba(114, 92, 92, 0.1));
+    border-radius: 1px;
     z-index: 0;
 }
 
 .block-article {
-    line-height: 120%;
-    margin-top: 10px;
+    line-height: 110%;
     margin-bottom: 0px;
     position: relative;
     counter-reset: line-count 0;
@@ -378,14 +387,14 @@ $content-family: 'Istok Web', sans-serif;
 .block-article__line {
     position: relative;
     display: block;
-    max-height: fit-content;
+    max-height: min-content;
 }
 
 .block-article__inner {
     overflow: auto;
     overscroll-behavior-x: contain;
     font-size: 1em;
-    line-height: 120%;
+    line-height: 110%;
 }
 
 .articles__content--open .articles__toggler {
@@ -403,6 +412,7 @@ $content-family: 'Istok Web', sans-serif;
     overflow: unset;
     gap: 5px;
 }
+
 .articles__content .articles__toggler {
     -webkit-appearance: none;
     -moz-appearance: none;
