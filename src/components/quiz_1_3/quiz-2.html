@@ -1,6 +1,14 @@
-<div id="quiz">
-  <div id="question">Вопрос</div>
-  <input type="button" id="question-left" value="Нет" />
-  <input type="button" id="question-right" value="Да" />
-  <div id="result"></div>
+<div id="quiz" class="row justify-content-around">
+  <div class="col-12 mb-4" id="question">Вопрос</div>
+  <div class="col-md-4 col-12">
+    <input type="button" id="question-left" value="Нет" class="quiz__button" />
+  </div>
+
+  <div class="col-md-4 col-12">
+    <input type="button" id="question-right" value="Да" class="quiz__button" />
+  </div>
+
+  <div class="result__back">
+    <div id="result" class="col-12"></div>
+  </div>
 </div>
