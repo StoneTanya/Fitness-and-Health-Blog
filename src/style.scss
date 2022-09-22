@@ -299,6 +299,18 @@ $content-family: 'Istok Web', sans-serif;
     position: inherit;
 }
 
+// стили для теста:
+
+#start_test{
+    height: 100%;
+    background: linear-gradient(45deg,rgba(255, 230, 226, 0.459), #fbe9e7), url(https://img.freepik.com/free-photo/flat-lay-still-life-sport-composition_23-2149006380.jpg?w=900&t=st=1663861036~exp=1663861636~hmac=dd87f89e9defbe72b25c2c1614b0f9cb8a2799f2c0b57b2a7aa888ba45d10295) ; 
+    filter: blur(0.5px) brightness(1.05) grayscale(0.03)  ;
+    background-size: cover;
+  
+}
+
+
+
 //стили для статей:          (нужно будет почистить)
 
 .article_figure {
