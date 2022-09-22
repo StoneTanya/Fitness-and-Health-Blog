@@ -1,4 +1,4 @@
-import {ComponentArticlesMental} from "../articles/index";
+import { ComponentArticlesMental } from "../articles/index";
 import { startPopup } from "../popup/popup";
 import TrainersCheckListContent from "./runTrainers.html";
 import WormUpGuideContent from "./wormUpGuide.html";
@@ -26,9 +26,8 @@ let questions = [
 let questionIndex = 0;
 let finalMask = 0; //двоичный код результата
 
-let checkListTrainers = '';
-checkListTrainers +=
-    `<div id="">
+let checkListTrainers = "";
+checkListTrainers += `<div id="">
     <p>Вы можете <a href="#" id="openCheckListTrainers">скачать чек-лист по выбору беговых кроссовок</a> и <a href="#" id="openWormUpGuide">инструкцию</a> по разминке перед пробежкой</p>
 </div>`;
 
@@ -39,7 +38,8 @@ answer.set(
 ); //(111) = 7
 answer.set(
   3,
-  "Вы можете присоединиться к сообществу бегунов или велосипедистов в вашем городе. Так вы получите системные аэробные нагрузки — они лучше других помогают справиться с тревогой и стрессом. А еще найдете компанию единомышленников." + `${checkListTrainers}`
+  "Вы можете присоединиться к сообществу бегунов или велосипедистов в вашем городе. Так вы получите системные аэробные нагрузки — они лучше других помогают справиться с тревогой и стрессом. А еще найдете компанию единомышленников." +
+    `${checkListTrainers}`
 ); //(011) = 3
 answer.set(
   5,
@@ -47,7 +47,8 @@ answer.set(
 ); //(101) = 5
 answer.set(
   1,
-  "Попробуйте групповые беговые тренировки, из часто организовывают самостоятельные тренеры по бегу. Активное движение хорошо снимает стресс, а приятная компания поднимет настроение." + `${checkListTrainers}`
+  "Попробуйте групповые беговые тренировки, из часто организовывают самостоятельные тренеры по бегу. Активное движение хорошо снимает стресс, а приятная компания поднимет настроение." +
+    `${checkListTrainers}`
 ); //(001) = 1
 answer.set(
   6,
@@ -55,7 +56,8 @@ answer.set(
 ); //(110) = 6
 answer.set(
   2,
-  "Попробуйте начать бегать или освоить велосипед. Регулярная активность снижает уровень стресса и помогает бороться с тревогой."+ `${checkListTrainers}`
+  "Попробуйте начать бегать или освоить велосипед. Регулярная активность снижает уровень стресса и помогает бороться с тревогой." +
+    `${checkListTrainers}`
 ); //(010) = 2
 answer.set(
   4,
@@ -89,26 +91,32 @@ function updateQuestionTitle() {
     adviseField.innerHTML = `
                 <div id="quiz__advise__content">
                     <h3>Хотите уточнить результат?</h3>   
-                    <p>Вы можете <a href="#" class="sign_up">Записаться на консультацию</a></p>
+                    <p>Вы можете <a href="#" class="sign_up">записаться на консультацию</a></p>
                     <h3>Хотите больше знать о тренировках для ментального здоровья?</h3>   
                     <p>Вот <a href="#articles_mental_health" id="openArticlesMentalHealth">несколько интересных статей об этом.</a></p>
                     </div>
             </div>`;
 
-            document.getElementById("openArticlesMentalHealth").addEventListener("click", (e) => {
-                e.preventDefault();
-                ComponentArticlesMental();
-            });
+    document
+      .getElementById("openArticlesMentalHealth")
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+        ComponentArticlesMental();
+      });
 
-            document.getElementById('openCheckListTrainers').addEventListener("click", (e) => {
-              e.preventDefault();
-              startPopup(TrainersCheckListContent);
-            });
+    document
+      .getElementById("openCheckListTrainers")
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+        startPopup(TrainersCheckListContent);
+      });
 
-            document.getElementById('openWormUpGuide').addEventListener("click", (e) => {
-              e.preventDefault();
-              startPopup(WormUpGuideContent);
-            });
+    document
+      .getElementById("openWormUpGuide")
+      .addEventListener("click", (e) => {
+        e.preventDefault();
+        startPopup(WormUpGuideContent);
+      });
   }
 }
 
