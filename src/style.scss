@@ -198,8 +198,6 @@ $content-family: 'Istok Web', sans-serif;
 
 #test__block {
     padding: 2% 4%;
-    
-   
 }
 
 #question, #head__content {
@@ -244,6 +242,7 @@ $content-family: 'Istok Web', sans-serif;
         left: -40vw;
         overflow: hidden;
         margin: 0;
+        z-index: 1;
     }
 }
 
@@ -331,19 +330,19 @@ $content-family: 'Istok Web', sans-serif;
 
 .card-title {
     text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
-  background-color: rgba(63, 55, 54, 0.8);
-  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    background-color: rgba(63, 55, 54, 0.8);
+a {
     color: white;
     text-decoration: none;
-  }
-  a:hover {
+}
+a:hover {
     color:$accent-color;
-  }
+}
 }
 
 #mentalArticles {
