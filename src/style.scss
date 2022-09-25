@@ -34,19 +34,19 @@ h4 {
     padding-top: 1%;
     padding-bottom: 1%;
     height: fit-content;
+}
 
-    .nav__name {
-        font-family: $font-main;
-        font-size: 2rem;
-        // color: $title-color;
-        line-height: 100%;
+.telegram-link {
+    img {
+        width: 10%;
     }
+}
 
-    .nav__contacts {
-        img {
-            width: 10%;
-        }
-    }
+.nav__name {
+    font-family: $font-main;
+    font-size: 2rem;
+    color: $title-color;
+    line-height: 100%;
 }
     #navbar {
         height: 7vh;
@@ -56,7 +56,6 @@ h4 {
         font-family: $content-family;
         color: $btn-color;
     }
-
 
 
         //Intro
@@ -74,6 +73,7 @@ h4 {
         display: inline;
         background-color: #fbe9e7;
         box-shadow: -10px 0 0 #fbe9e7, 10px 0 0 #fbe9e7;
+        border-radius: 10%;
         padding: 0 10px 0 0;
         color: $title-color;
         z-index: 1;
@@ -82,6 +82,11 @@ h4 {
         font-weight: 900;
         font-size: 4rem;
         line-height: 125%;
+    }
+
+    .intro__content {
+        background: radial-gradient(50% 50% at bottom right, rgba(58, 95, 86, 0.55) 0%, rgba(58, 95, 86, 0) 100%) no-repeat;
+        background-color:  #F4F3F0;
     }
 
     .intro__content__text {
@@ -109,12 +114,15 @@ h4 {
 
     img {
         max-width: 100%;
+        margin: 7% 4%;
+        border-radius: 5%; 
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     }
 }
     .about__content {
-        margin-top: 15vh;
-        background: radial-gradient(50% 50% at 50% 50%, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%) no-repeat;
-        // background-position: left bottom;
+        margin-top: 5%;
+        background: radial-gradient(50% 50% at bottom left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%), 
+        radial-gradient(50% 50% at right top, rgba(58, 95, 86, 0.55) 0%, rgba(58, 95, 86, 0) 100%) no-repeat;
     }
 
     .about__greet {
@@ -132,28 +140,19 @@ h4 {
         vertical-align: middle;
         text-align: center;
 
-        .quiz__head {
-            font-size: 20pt;
-            margin: 10px;
-            margin-bottom: 50px;
-        }
-
         .quiz__body {
             margin: 10px;
         }
     }
 
-    #result {
+    #result.active, #quiz__result__content.active {
         font-size: 1.5rem;
+        height: 20vh;
+    }
 
-        .result__back {
-            position: absolute;
-            height: 150px;
-            left: -31.94%;
-            right: 75.97%;
-            top: 70%;
-            background: radial-gradient(50% 50% at 50% 50%, rgba(58, 95, 86, 0.376) 0%, rgba(58, 95, 86, 0) 100%);
-        }
+    .result__back {
+        border-radius: 5%; 
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     }
 
     #quiz__advise__content {
@@ -166,7 +165,6 @@ h4 {
         a {
             text-decoration: none;
             color: #008B8B;
-
         }
 
         a:hover {
@@ -196,10 +194,10 @@ h4 {
         padding: 2% 4%;
     }
 
-    #question,
-    #head__content {
+    .quiz__head {
         font-family: $content-family;
         font-size: 1.5rem;
+        margin-bottom: 10%;
     }
 
     // slider
@@ -307,7 +305,9 @@ h4 {
     }
 
     #footer {
-        background-color: $back-color;
+        background-color:  #292C32;
+        color: #fff;
+        font-size: 1.5rem;
 
         .footer-content {
             padding: 5%;
@@ -319,10 +319,14 @@ h4 {
 
         a {
             text-decoration: none;
+            color: #fff;
+            // img {
+            //     width: 5%;
+            // }
+        }
 
-            img {
-                width: 12%;
-            }
+        #openPrivacy {
+            font-size: 1.2rem;
         }
     }
 
@@ -410,12 +414,12 @@ h4 {
 
 //стили для статей:        
 //карточки-ссылки на статьи
-
 .articles__wrapper {
         display: grid;
         gap: 5%;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        grid-template-rows: repeat(1, 55vh);
+        grid-template-rows: repeat(1, 48vh);
+        background-color: #F4F3F0;
     }    
 
 .articles__wrapper > div > img {
@@ -427,6 +431,8 @@ h4 {
     .articles__wrapper__inner {
             position: relative;
             text-align: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
         a {
             position: absolute;
             top: 50%;
