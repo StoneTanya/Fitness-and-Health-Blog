@@ -129,6 +129,7 @@ const questions = [
 function createQuiz(test) {
   const headElem = document.getElementById("head__content");
   const buttonsElem = document.getElementById("quiz__buttons");
+  const answerElem = document.getElementById("quiz__result__content");
   //Проверяем, есть ли ещё вопросы
   if (test.current < test.questions.length) {
     headElem.innerHTML = test.questions[test.current].text; //Если есть, меняем вопрос в заголовке
@@ -148,7 +149,9 @@ function createQuiz(test) {
   } else {
     //Если это конец, то выводим результат
     buttonsElem.innerHTML = "";
-    headElem.innerHTML = test.results[test.result].text;
+    headElem.innerHTML = "";
+    answerElem.classList.add('active');
+    answerElem.innerHTML = test.results[test.result].text;
 
     let adviseField = document.getElementById("quiz__advise");
     let out = "";

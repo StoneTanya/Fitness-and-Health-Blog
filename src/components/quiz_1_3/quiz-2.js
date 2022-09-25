@@ -86,7 +86,8 @@ function updateQuestionTitle() {
     rightButton.style.display = "none"; // убираем текст вопроса справа
     let result = document.getElementById("result");
     result.innerHTML = answer.get(finalMask);
-
+    result.classList.add('active');
+    
     let adviseField = document.getElementById("quiz__advise");
     adviseField.innerHTML = `
                 <div id="quiz__advise__content">
