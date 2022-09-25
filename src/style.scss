@@ -61,11 +61,12 @@ h4 {
 
         //Intro
     .intro__content__imageWrap {
-        width: 50vw;
-
+        width: 60%;
         img {
             max-width: 100%;
+            max-height: 100%;
             margin: 0;
+            object-fit: cover;
         }
     }
 
@@ -89,7 +90,7 @@ h4 {
 
     .intro__content__test {
         font-family: $content-family;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
         p a {
             text-decoration: none;
             color: #008B8B;
@@ -213,6 +214,7 @@ h4 {
         opacity: 0; // Скрываем фон и сам попап
         pointer-events: none; // Запрещаем ему быть целью событий
         transition: 0.5s all;
+        z-index: 1;
     }
 
     .popup__back.active {
@@ -220,7 +222,8 @@ h4 {
         opacity: 1; // Показываем фон и попап
         pointer-events: all; // Возвращаем события
         transition: 0.5s all;
-        background-color: rgba(255, 230, 226, 0.459);
+        background-color: rgba(49, 48, 48, 0.712);
+        z-index: 1;
     }
 
     .popup {
@@ -238,7 +241,6 @@ h4 {
             left: -40vw;
             overflow: hidden;
             margin: 0;
-            z-index: 1;
         }
     }
 
@@ -282,10 +284,10 @@ h4 {
         width: auto;
         margin-top: -22px;
         padding-top: 1%;
-        padding-right: 3%;
-        padding-left: 3%;
+        padding-right: 2%;
+        padding-left: 2%;
         padding-bottom: 1%;
-        border-radius: 20px;
+        border-radius: 30px;
         border: none;
     }
 
@@ -298,7 +300,7 @@ h4 {
         left: -15%;
     }
 
-    /* При наведении курсора добавьте черный цвет фона с небольшим количеством прозрачного */
+
     #prev:hover,
     #next:hover {
         background-color: $accent-color;
@@ -324,7 +326,7 @@ h4 {
         }
     }
 
-        // стили для тестов:
+// стили для тестов:
 
     #start_test {
         height: 100%;
@@ -332,6 +334,10 @@ h4 {
         filter: blur(0.5px) brightness(1.05) grayscale(0.03);
         background-size: cover;
         padding: 5% 3%;
+
+        li, p {
+            font-size: 1.5rem;
+        }
     }
 
     //hover-эффект для кнопки 
