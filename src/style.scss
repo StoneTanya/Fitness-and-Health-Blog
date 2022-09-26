@@ -212,7 +212,7 @@ h4 {
         opacity: 0; // Скрываем фон и сам попап
         pointer-events: none; // Запрещаем ему быть целью событий
         transition: 0.5s all;
-        z-index: 1;
+        z-index: 2;
     }
 
     .popup__back.active {
@@ -221,22 +221,21 @@ h4 {
         pointer-events: all; // Возвращаем события
         transition: 0.5s all;
         background-color: rgba(49, 48, 48, 0.712);
-        z-index: 1;
+        z-index: 2;
     }
 
     .popup {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(0); // Центрируем и масштабируем в 0 само окно
-        width: 33%;
+        // transform: translate(-50%, -50%) scale(0); // Центрируем и масштабируем в 0 само окно
+        // width: 70%;
         padding: 25px;
         transition: 0.5s all;
 
         embed {
-            width: 100vw;
-            height: 100vh;
-            left: -40vw;
+            width: 90vw;
+            height: 95vh;
             overflow: hidden;
             margin: 0;
         }
