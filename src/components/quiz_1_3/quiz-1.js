@@ -1,5 +1,6 @@
 import { startPopup } from "../popup/popup";
 import checkListContent from "./checkList11Questions.html";
+import signUpContent from "./signup.html";
 
 class Test {
   constructor(questions, results) {
@@ -169,6 +170,12 @@ function createQuiz(test) {
       .addEventListener("click", (event) => {
         event.preventDefault();
         startPopup(checkListContent);
+      });
+      document
+      .querySelector(".sign_up")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        startPopup(signUpContent);
       });
   }
 }

@@ -2,6 +2,7 @@ import testDiv from "./testBlock_Purpose.html";
 import quiz_2 from "../quiz_1_3/quiz-2.html";
 import quiz_4 from "../quiz_1_3/quiz-4.html";
 import testHobby from "../quiz_1_3/quiz_wrapper.html";
+import signUpContent from "../quiz_1_3/signup.html";
 
 import { startTest1 } from "../quiz_1_3/quiz-1";
 import { startTest2 } from "../quiz_1_3/quiz-2";
@@ -33,7 +34,7 @@ export default function ComponentTestPurpose() {
   });
 
   buttonLook.addEventListener("click", function (e) {
-    e.preventDefault(e);
+    e.preventDefault();
     testPurposeDiv.style.display = "none";
     quizDiv.innerHTML = testHobby;
     startTest3();
@@ -41,8 +42,15 @@ export default function ComponentTestPurpose() {
 
   buttonMedicine.addEventListener("click", function (e) {
     e.preventDefault();
-    // testPurposeDiv.style.display = "none";
-    // quizDiv.innerHTML = quiz_4;
-    startPopup(quiz_4);
+    testPurposeDiv.style.display = "none";
+    quizDiv.innerHTML = quiz_4;
+
+    const signUpLink = document.querySelector(".sign_up");
+    console.log(signUpLink);
+
+    signUpLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        startPopup(signUpContent);
+      });
   });
 }

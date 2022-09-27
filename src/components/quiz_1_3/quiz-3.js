@@ -1,6 +1,7 @@
 import { ComponentArticlesFigure } from "../articles/index";
 import cheatListGymContent from "./cheatGym.html";
 import { startPopup } from "../popup/popup";
+import signUpContent from "./signup.html";
 
 class Test {
   constructor(questions, results) {
@@ -163,6 +164,13 @@ function createQuiz(test) {
       e.preventDefault();
       startPopup(cheatListGymContent);
     });
+
+    document
+      .querySelector(".sign_up")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        startPopup(signUpContent);
+      });
   }
 }
 

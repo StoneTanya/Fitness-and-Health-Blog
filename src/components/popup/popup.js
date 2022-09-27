@@ -13,7 +13,6 @@ export function startPopup(content) {
     popupBack.classList.add('active');
     
     closePopup.addEventListener('click', (e) => {   // Вешаем обработчик на крестик
-        console.log("close popup")
         e.preventDefault();
         popupBack.classList.remove('active');                // Убираем активный класс с фона
         popup.classList.remove('active');                    // И с окна
