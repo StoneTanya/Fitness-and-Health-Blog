@@ -2,6 +2,7 @@ import { ComponentArticlesMental } from "../articles/index";
 import { startPopup } from "../popup/popup";
 import TrainersCheckListContent from "./runTrainers.html";
 import WormUpGuideContent from "./wormUpGuide.html";
+import signUpContent from "./signup.html";
 
 let questions = [
   {
@@ -117,6 +118,12 @@ function updateQuestionTitle() {
       .addEventListener("click", (e) => {
         e.preventDefault();
         startPopup(WormUpGuideContent);
+      });
+      document
+      .querySelector(".sign_up")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        startPopup(signUpContent);
       });
   }
 }
