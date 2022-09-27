@@ -6,6 +6,7 @@ import testHobby from "../quiz_1_3/quiz_wrapper.html";
 import { startTest1 } from "../quiz_1_3/quiz-1";
 import { startTest2 } from "../quiz_1_3/quiz-2";
 import { startTest3 } from "../quiz_1_3/quiz-3";
+import { startPopup } from "../popup/popup";
 
 export default function ComponentTestPurpose() {
   const testPurposeDiv = document.getElementById("test__block");
@@ -40,7 +41,8 @@ export default function ComponentTestPurpose() {
 
   buttonMedicine.addEventListener("click", function (e) {
     e.preventDefault();
-    testPurposeDiv.style.display = "none";
-    quizDiv.innerHTML = quiz_4;
+    // testPurposeDiv.style.display = "none";
+    // quizDiv.innerHTML = quiz_4;
+    startPopup(quiz_4);
   });
 }
