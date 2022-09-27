@@ -104,6 +104,7 @@ function updateQuestionTitle() {
       .addEventListener("click", (e) => {
         e.preventDefault();
         ComponentArticlesMental();
+        window.scrollBy(0, 1100)
       });
 
     document

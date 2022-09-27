@@ -416,8 +416,8 @@ h4 {
 .articles__wrapper {
         display: grid;
         gap: 5%;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        grid-template-rows: repeat(1, 48vh);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: repeat(auto-fit, 60vh);
         background-color: #F4F3F0;
     }    
 
@@ -430,8 +430,7 @@ h4 {
     .articles__wrapper__inner {
             position: relative;
             text-align: center;
-            margin-top: 5%;
-            margin-bottom: 5%;
+            margin: 5% 5%;
         a {
             position: absolute;
             top: 50%;
@@ -439,7 +438,7 @@ h4 {
             transform: translate(-50%, -50%);
             text-decoration: none;
             color: white;
-            font-size: 1.7rem;
+            font-size: 2rem;
             background-color: rgba(63, 55, 54, 0.8);
         }
         a:hover {
