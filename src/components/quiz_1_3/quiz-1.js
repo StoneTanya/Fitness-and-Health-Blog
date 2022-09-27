@@ -139,7 +139,7 @@ function createQuiz(test) {
     for (let i = 0; i < test.questions[test.current].answers.length; i++) {
       //Создаём кнопки для новых вариантов ответов
       let btn = document.createElement("button");
-      btn.className = "quiz__button col-4";
+      btn.className = "quiz__button";
       btn.innerHTML = test.questions[test.current].answers[i].text;
       btn.addEventListener("click", () => {
         test.click(i);
@@ -151,7 +151,7 @@ function createQuiz(test) {
     //Если это конец, то выводим результат
     buttonsElem.innerHTML = "";
     headElem.innerHTML = "";
-    answerElem.classList.add('active');
+    answerElem.classList.add("active");
     answerElem.innerHTML = test.results[test.result].text;
 
     let adviseField = document.getElementById("quiz__advise");
@@ -171,12 +171,10 @@ function createQuiz(test) {
         event.preventDefault();
         startPopup(checkListContent);
       });
-      document
-      .querySelector(".sign_up")
-      .addEventListener("click", (event) => {
-        event.preventDefault();
-        startPopup(signUpContent);
-      });
+    document.querySelector(".sign_up").addEventListener("click", (event) => {
+      event.preventDefault();
+      startPopup(signUpContent);
+    });
   }
 }
 export function startTest1() {

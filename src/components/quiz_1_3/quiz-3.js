@@ -125,7 +125,7 @@ function createQuiz(test) {
     for (let i = 0; i < test.questions[test.current].answers.length; i++) {
       //Создаём кнопки для новых вариантов ответов
       let btn = document.createElement("button");
-      btn.className = "quiz__button col-4";
+      btn.className = "quiz__button";
       btn.innerHTML = test.questions[test.current].answers[i].text;
       btn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -157,7 +157,7 @@ function createQuiz(test) {
       .getElementById("openArticlesFigure")
       .addEventListener("click", (e) => {
         e.preventDefault();
-        window.scrollBy(0, 1100)
+        window.scrollBy(0, 1100);
         ComponentArticlesFigure();
       });
 
@@ -166,12 +166,10 @@ function createQuiz(test) {
       startPopup(cheatListGymContent);
     });
 
-    document
-      .querySelector(".sign_up")
-      .addEventListener("click", (event) => {
-        event.preventDefault();
-        startPopup(signUpContent);
-      });
+    document.querySelector(".sign_up").addEventListener("click", (event) => {
+      event.preventDefault();
+      startPopup(signUpContent);
+    });
   }
 }
 
