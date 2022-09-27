@@ -157,6 +157,7 @@ function createQuiz(test) {
       .getElementById("openArticlesFigure")
       .addEventListener("click", (e) => {
         e.preventDefault();
+        window.scrollBy(0, 1100)
         ComponentArticlesFigure();
       });
 

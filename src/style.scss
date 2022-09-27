@@ -416,8 +416,8 @@ h4 {
 .articles__wrapper {
         display: grid;
         gap: 5%;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        grid-template-rows: repeat(auto, 60vh);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: repeat(auto-fit, 60vh);
         background-color: #F4F3F0;
     }    
 
