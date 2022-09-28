@@ -48,115 +48,120 @@ h4 {
     color: $title-color;
     line-height: 100%;
 }
-    #navbar {
-        height: 7vh;
-        background-color: $back-color;
-        margin-left: 0;
-        font-size: 1.3rem;
-        font-family: $content-family;
-        color: $btn-color;
+
+#navbar {
+    height: 7vh;
+    background-color: $back-color;
+    margin-left: 0;
+    font-size: 1.3rem;
+    font-family: $content-family;
+    color: $btn-color;
+}
+
+
+//Intro
+.intro__content__imageWrap {
+    width: 60%;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+        object-fit: cover;
+    }
+}
+
+.text_highlited {
+    display: inline;
+    background-color: #fbe9e7;
+    box-shadow: -10px 0 0 #fbe9e7, 10px 0 0 #fbe9e7;
+    border-radius: 10%;
+    padding: 0 10px 0 0;
+    color: $title-color;
+    z-index: 1;
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 125%;
+}
+
+.intro__content {
+    background: radial-gradient(50% 50% at bottom right, rgba(58, 95, 86, 0.55) 0%, rgba(58, 95, 86, 0) 100%) no-repeat;
+    background-color: #F4F3F0;
+}
+
+.intro__content__text {
+    margin-left: -15%;
+}
+
+.intro__content__test {
+    font-family: $content-family;
+    font-size: 1.7rem;
+
+    p a {
+        text-decoration: none;
+        color: #008B8B;
+
+        p a:hover {
+            text-decoration: underline gray;
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .intro__content {
+        display: flex;
+        flex-flow: column;
     }
 
 
-        //Intro
-    .intro__content__imageWrap {
-        width: 60%;
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            margin: 0;
-            object-fit: cover;
-        }
+    .intro__content__text {
+        margin-left: 0%;
+        margin-bottom: 10%;
+        margin-top: -47%;
     }
 
     .text_highlited {
-        display: inline;
-        background-color: #fbe9e7;
-        box-shadow: -10px 0 0 #fbe9e7, 10px 0 0 #fbe9e7;
-        border-radius: 10%;
-        padding: 0 10px 0 0;
-        color: $title-color;
-        z-index: 1;
-        font-family: $font-main;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 4rem;
-        line-height: 125%;
-    }
+        font-size: 2.5rem;
+        background-color: rgba(63, 55, 54, 0.8);
+        box-shadow: -10px 0 0 rgba(63, 55, 54, 0.8), 10px 0 0 rgba(63, 55, 54, 0.8);
+        color: white;
 
-    .intro__content {
-        background: radial-gradient(50% 50% at bottom right, rgba(58, 95, 86, 0.55) 0%, rgba(58, 95, 86, 0) 100%) no-repeat;
-        background-color:  #F4F3F0;
-    }
-
-    .intro__content__text {
-        margin-left: -15%;
     }
 
     .intro__content__test {
-        font-family: $content-family;
-        font-size: 1.7rem;
-        p a {
-            text-decoration: none;
-            color: #008B8B;
-            p a:hover {
-                text-decoration: underline gray;
-            }
-        }
+        font-size: 1.3rem;
     }
 
-
-    @media screen and (max-width: 992px) {
-        .intro__content {
-            display: flex;
-            flex-flow: column;
-        }
-        
-        
-        .intro__content__text {
-            margin-left: 0%;
-            margin-bottom: 10%;
-            margin-top: -47%;
-        }
-
-        .text_highlited {
-            font-size: 2.5rem; 
-            background-color: rgba(63, 55, 54, 0.8);
-        box-shadow: -10px 0 0 rgba(63, 55, 54, 0.8), 10px 0 0 rgba(63, 55, 54, 0.8);
-        color: white;
-                   
-        }
-
-        .intro__content__test {
-            font-size: 1.3rem;
-        }
-
-        .intro__content__imageWrap {
-            width: 100vw;
-        }
-       
-        #navbar {
-            font-size: 1rem;
-        }
-
-        .quiz__button {
-            font-size: 1.1rem;
-        }
+    .intro__content__imageWrap {
+        width: 100vw;
     }
 
-    @media screen and (min-width: 768px) and (max-width:820px) {
-        .intro__content__text {
-            margin-bottom: 30%;
-        }
-
-        .text_highlited {
-            font-size: 4rem;          
-        }
-
-        .intro__content__test {
-            font-size: 2rem;
-        }
+    #navbar {
+        font-size: 1rem;
     }
+
+    .quiz__button {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:820px) {
+    .intro__content__text {
+        margin-bottom: 30%;
+    }
+
+    .text_highlited {
+        font-size: 4rem;
+    }
+
+    .intro__content__test {
+        font-size: 2rem;
+    }
+}
+
 //intro end
 
 
@@ -168,490 +173,520 @@ h4 {
         max-width: 100%;
         margin-top: 7%;
         margin-bottom: 7%;
-        border-radius: 24px; 
+        border-radius: 24px;
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     }
 }
-    .about__content {
-        margin-top: 5%;
-        background: radial-gradient(50% 50% at bottom left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%), 
-        radial-gradient(50% 50% at right top, rgba(58, 95, 86, 0.55) 0%, rgba(58, 95, 86, 0) 100%) no-repeat;
-    }
 
-    .about__greet {
-        margin-bottom: 5%;
-        line-height: 1.5;
-        font-size: 1.5rem;
-    }
+.about__content {
+    margin-top: 5%;
+    background: radial-gradient(50% 50% at bottom left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%),
+        radial-gradient(50% 50% at right top, rgba(58, 95, 86, 0.55) 0%, rgba(58, 95, 86, 0) 100%) no-repeat;
+}
+
+.about__greet {
+    margin-bottom: 5%;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
 //about - end
 
 //quiz
-    #quiz__wrapper {
-        font-family: $content-family;
-        width: 100%;
-        height: 100%;
-        vertical-align: middle;
-        text-align: center;
+#quiz__wrapper {
+    font-family: $content-family;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
 
-        .quiz__body {
-            margin: 10px;
-        }
+    .quiz__body {
+        margin: 10px;
     }
-    .test__block_choise {
-        padding: 5% 5%;
-    }
+}
 
-    #result.active, #quiz__result__content.active {
-        font-size: 1.5rem;
-        margin-bottom: 10%;
-        padding: 5% 5%;
-    }
+.test__block_choise {
+    padding: 5% 5%;
+}
 
-    .result__back, .test__block_choise {
-        background: radial-gradient(50% 50% at top right, rgba(207, 103, 108, 0.296) 0%, rgba(219, 52, 59, 0) 100%) no-repeat;
-        background-color:  hsl(45, 15%, 95%);
-    }
+#result.active,
+#quiz__result__content.active {
+    font-size: 1.5rem;
+    margin-bottom: 10%;
+    padding: 5% 5%;
+}
+
+.result__back,
+.test__block_choise {
+    background: radial-gradient(50% 50% at top right, rgba(207, 103, 108, 0.296) 0%, rgba(219, 52, 59, 0) 100%) no-repeat;
+    background-color: hsl(45, 15%, 95%);
+}
 
 
-    #quiz__advise__content {
-        border: 2px solid #757575;
-        border-radius: 16px;
-        padding: 3% 3%;
-        font-family: $content-family;
-        font-size: 1.5rem;
+#quiz__advise__content {
+    border: 2px solid #757575;
+    border-radius: 16px;
+    padding: 3% 3%;
+    font-family: $content-family;
+    font-size: 1.5rem;
 
-        a {
-            text-decoration: none;
-            color: #008B8B;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: $accent-color;
-        }
-
-        h3 {
-            font-weight: bold;
-        }
+    a {
+        text-decoration: none;
+        color: #008B8B;
     }
 
-    .quiz__button {
-        font-family: $content-family;
-        border: 0;
-        border-radius: 6px;
-        background: $btn-color;
+    a:hover {
+        text-decoration: underline;
+        color: $accent-color;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+}
+
+.quiz__button {
+    font-family: $content-family;
+    border: 0;
+    border-radius: 6px;
+    background: $btn-color;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 1.5rem;
+    display: block;
+    margin: 2px auto;
+    cursor: pointer;
+}
+
+.quiz__head {
+    font-family: $content-family;
+    font-size: 1.5rem;
+    margin-bottom: 10%;
+}
+
+// slider
+/* Расположите контейнер изображения (необходимо расположить стрелки влево и вправо) */
+.popup__back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; // Скрываем фон и сам попап
+    pointer-events: none; // Запрещаем ему быть целью событий
+    transition: 0.5s all;
+    z-index: 2;
+}
+
+.popup__back.active {
+    // При добавлении класса 'active'
+    opacity: 1; // Показываем фон и попап
+    pointer-events: all; // Возвращаем события
+    transition: 0.5s all;
+    background-color: rgba(49, 48, 48, 0.712);
+    z-index: 2;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); // Центрируем и масштабируем в 0 само окно
+    width: 35%;
+    padding: 25px;
+    transition: 0.5s all;
+
+    embed {
+        width: 90vw;
+        height: 95vh;
+        overflow: hidden;
+        margin: 0;
+    }
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем
+    transition: 0.5s all;
+}
+
+.close-popup {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+    width: 2%;
+}
+
+/* Далее код для стилизации  */
+/* Скрыть изображения по умолчанию */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.sliderContainer div:first-child {
+    display: block;
+}
+
+.popup__back div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Вперед и предыдущие кнопки */
+#prev,
+#next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding-top: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    border-radius: 30px;
+    border: none;
+}
+
+/* Позиция "next кнопка" на право */
+#next {
+    right: -15%;
+}
+
+#prev {
+    left: -15%;
+}
+
+
+#prev:hover,
+#next:hover {
+    background-color: $accent-color;
+}
+
+#footer {
+    background-color: #292C32;
+    color: #fff;
+    font-size: 1.5rem;
+
+    .footer-content {
+        padding: 5%;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
         color: #fff;
-        padding: 10px 25px;
-        font-size: 1.5rem;
-        display: block;
-        margin: 2px auto;
-        cursor: pointer;
+        // img {
+        //     width: 5%;
+        // }
     }
 
-    .quiz__head {
-        font-family: $content-family;
-        font-size: 1.5rem;
-        margin-bottom: 10%;
+    #openPrivacy {
+        font-size: 1.2rem;
     }
-
-    // slider
-    /* Расположите контейнер изображения (необходимо расположить стрелки влево и вправо) */
-    .popup__back {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0; // Скрываем фон и сам попап
-        pointer-events: none; // Запрещаем ему быть целью событий
-        transition: 0.5s all;
-        z-index: 2;
-    }
-
-    .popup__back.active {
-        // При добавлении класса 'active'
-        opacity: 1; // Показываем фон и попап
-        pointer-events: all; // Возвращаем события
-        transition: 0.5s all;
-        background-color: rgba(49, 48, 48, 0.712);
-        z-index: 2;
-    }
-
-    .popup {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        // transform: translate(-50%, -50%) scale(0); // Центрируем и масштабируем в 0 само окно
-        // width: 70%;
-        padding: 25px;
-        transition: 0.5s all;
-
-        embed {
-            width: 90vw;
-            height: 95vh;
-            overflow: hidden;
-            margin: 0;
-        }
-    }
-
-    .popup.active {
-        transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем
-        transition: 0.5s all;
-    }
-
-    .close-popup {
-        position: absolute;
-        top: 5%;
-        right: 10%;
-        cursor: pointer;
-        width: 2%;
-    }
-
-    /* Далее код для стилизации  */
-    /* Скрыть изображения по умолчанию */
-    .mySlides {
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
-
-    .sliderContainer div:first-child {
-        display: block;
-    }
-
-    .popup__back div img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Вперед и предыдущие кнопки */
-    #prev,
-    #next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding-top: 1%;
-        padding-right: 2%;
-        padding-left: 2%;
-        padding-bottom: 1%;
-        border-radius: 30px;
-        border: none;
-    }
-
-    /* Позиция "next кнопка" на право */
-    #next {
-        right: -15%;
-    }
-
-    #prev {
-        left: -15%;
-    }
-
-
-    #prev:hover,
-    #next:hover {
-        background-color: $accent-color;
-    }
-
-    #footer {
-        background-color:  #292C32;
-        color: #fff;
-        font-size: 1.5rem;
-
-        .footer-content {
-            padding: 5%;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #fff;
-            // img {
-            //     width: 5%;
-            // }
-        }
-
-        #openPrivacy {
-            font-size: 1.2rem;
-        }
-    }
+}
 
 // стили для тестов:
 
-    #start_test {
-        height: 100%;
-        background:  radial-gradient(50% 50% at top left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%),
+#start_test {
+    height: 100%;
+    background: radial-gradient(50% 50% at top left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%),
         radial-gradient(50% 50% at bottom right, rgba(207, 103, 108, 0.296) 0%, rgba(219, 52, 59, 0) 100%) no-repeat;
-        background-color:  hsl(45, 15%, 95%);
-        padding: 5% 3%;
+    background-color: hsl(45, 15%, 95%);
+    padding: 5% 3%;
 
-        li, p {
-            font-size: 1.5rem;
-        }
-    }
-
-    //hover-эффект для кнопки 
-
-    #buttonStartTest {
-        position: relative;
-        display: inline-block;
-        width: 200px;
-        height: 60px;
-        text-align: center;
-        line-height: 60px;
-        color: #fff;
-        font-size: 24px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-family: sans-serif;
-        box-sizing: border-box;
-        background: linear-gradient(90deg, #DB7093, #F0E68C, #F08080, #FF6347);
-        background-size: 400%;
-        border-radius: 6px;
-        z-index: 1;
-    }
-
-    #buttonStartTest:hover {
-        animation: animate 8s linear infinite;
-    }
-
-    @keyframes animate {
-        0% {
-            background-position: 0%;
-        }
-
-        100% {
-            background-position: 400%;
-        }
-    }
-
-    #buttonStartTest:before {
-        content: "";
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        bottom: -5px;
-        left: -5px;
-        z-index: -1;
-        background: linear-gradient(90deg, #DB7093, #F0E68C, #F08080, #FF6347);
-        background-size: 400%;
-        border-radius: 40px;
-        opacity: 0;
-        transition: .5s;
-    }
-
-    #buttonStartTest:hover:before {
-        filter: blur(20px);
-        opacity: 1;
-        animation: animate 8s linear infinite;
-    }
-
-
-    .test_block_button {
-        font-family: $content-family;
+    li,
+    p {
         font-size: 1.5rem;
-        border: 0;
-        border-radius: 6px;
-        background: $btn-color;
-        color: white;
-        padding: 3% 4%;
     }
+}
+
+//hover-эффект для кнопки 
+
+#buttonStartTest {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #DB7093, #F0E68C, #F08080, #FF6347);
+    background-size: 400%;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+#buttonStartTest:hover {
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+#buttonStartTest:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #DB7093, #F0E68C, #F08080, #FF6347);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: .5s;
+}
+
+#buttonStartTest:hover:before {
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+
+
+.test_block_button {
+    font-family: $content-family;
+    font-size: 1.5rem;
+    border: 0;
+    border-radius: 6px;
+    background: $btn-color;
+    color: white;
+    padding: 3% 4%;
+}
 
 
 //стили для статей:        
 //карточки-ссылки на статьи
 .articles__wrapper {
-        // display: grid;
-        // gap: 5%;
-        // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        // grid-template-rows: repeat(auto-fit, 60vh);
-        background-color: #F4F3F0;
-    }    
+    // display: grid;
+    // gap: 5%;
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // grid-template-rows: repeat(auto-fit, 60vh);
+    background-color: #F4F3F0;
+}
 
-.articles__wrapper > div > img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-    }
+.articles__wrapper>div>img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
 
-    .articles__wrapper__inner {
-            position: relative;
-            text-align: center;
-            margin-top: 5%;
-            margin-bottom: 5%;
-        a {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-decoration: none;
-            color: white;
-            font-size: 2rem;
-            background-color: rgba(63, 55, 54, 0.8);
-            border-radius: 6px;
-        }
-        a:hover {
-            color: $accent-color;
-        }
-        img {
-            border-radius: 16px;
-        }
-    }
+.articles__wrapper__inner {
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
 
-    .article_figure {
-        counter-increment: article_figure;
-        padding: 2% 2%;
-    }
-
-    .article_title {
-        font-family: $font-main;
-    }
-
-    .articles__content {
-        position: relative;
-        overflow: hidden;
-        border: 1px solid gray;
-        border-radius: 6px;
-
-        a{
-            text-decoration: none;
-            color: $accent-color;
-            border-bottom: 1px solid;
-            border-bottom-color: rgba(205, 123, 154, 0.825);
-        }
-
-        a:hover {
-            text-decoration: none;
-            color: #d12626;
-            border-bottom-color: rgba(203, 17, 88, 0.2);
-          }
-
-
-          a:visited {
-            text-decoration: none;
-            color: #800080;
-            border-bottom-color: rgba(204, 0, 132, 0.727);
-          }
-    }
-
-    .articles__content>.articles__summary {
-        grid-row-start: 2;
-        grid-row-end: 4;
-        display: grid;
-        grid-gap: 30px;
-        grid-template-rows: 20px 1fr 20px;
-        height: 110px;
-        padding: 5px;
-        padding-bottom: 0;
-        background-color: rgba(114, 92, 92, 0.1);
-
-        p {
-            letter-spacing: normal;
-            line-height: 110%;
-        }
-    }
-
-    .articles__content>.articles__summary::before {
-        grid-row-start: 1;
-        content: counter(article_figure);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        border: 1px solid gray;
-        font-family: $font-main;
-        font-size: 30px;
-        font-weight: 400;
-    }
-
-    .block-article::before {
-        margin-bottom: 0.3em;
-        display: block;
-        width: max-content;
-        padding: 0.45em 0.9em 0.25em;
-        font-family: $content-family;
-        text-transform: uppercase;
-        font-size: .6em;
-        line-height: 110%;
-        background-color: rgba(116, 87, 87, 0.1);
-        border-radius: 2em;
-        transition: opacity .2s;
-    }
-
-    .articles__content::after {
-        content: " ";
-        display: block;
-        position: relative;
-        height: 100px;
-        background: linear-gradient(0deg, rgba(104, 111, 110, 0.5) 38%, rgba(114, 92, 92, 0.1));
-        border-radius: 1px;
-        z-index: 0;
-    }
-
-    .block-article {
-        line-height: 110%;
-        margin-bottom: 0px;
-        position: relative;
-        counter-reset: line-count 0;
-        white-space: normal;
-        display: block;
-    }
-
-    .block-article__line {
-        position: relative;
-        display: block;
-        max-height: min-content;
-    }
-
-    .block-article__inner {
-        overflow: auto;
-        overscroll-behavior-x: contain;
-        font-size: 1em;
-        line-height: 110%;
-    }
-
-    .articles__content--open .articles__toggler {
-        position: sticky;
-        grid-row-start: unset;
-        bottom: 1em;
-        margin-top: 5px;
-
-        
-    }
-
-    .articles__content--open {
-        overflow: unset;
-    }
-
-    .articles__content--open>.articles__summary {
-        height: auto;
-        grid-template-rows: unset;
-        overflow: unset;
-        gap: 5px;
-    }
-
-    .articles__content .articles__toggler {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        display: block;
+    a {
         position: absolute;
-        margin-top: 160px;
-        margin-left: 10px;
-        justify-self: start;
-        padding: 4px 15px;
-        box-shadow: 0 0 10px 5px rgb(0 0 0 / 10%);
-        border: 0;
-        border-radius: 5px;
-        z-index: 1;
-        cursor: pointer; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        background-color: rgba(63, 55, 54, 0.8);
+        border-radius: 6px;
     }
+
+    a:hover {
+        color: $accent-color;
+    }
+
+    img {
+        border-radius: 16px;
+    }
+}
+
+.article_figure {
+    counter-increment: article_figure;
+    padding: 2% 2%;
+}
+
+.article_title {
+    font-family: $font-main;
+}
+
+.articles__content {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid gray;
+    border-radius: 6px;
+
+    a {
+        text-decoration: none;
+        color: $accent-color;
+        border-bottom: 1px solid;
+        border-bottom-color: rgba(205, 123, 154, 0.825);
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #d12626;
+        border-bottom-color: rgba(203, 17, 88, 0.2);
+    }
+
+
+    a:visited {
+        text-decoration: none;
+        color: #800080;
+        border-bottom-color: rgba(204, 0, 132, 0.727);
+    }
+}
+
+.articles__content>.articles__summary {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-rows: 20px 1fr 20px;
+    height: 110px;
+    padding: 5px;
+    padding-bottom: 0;
+    background-color: rgba(114, 92, 92, 0.1);
+
+    p {
+        letter-spacing: normal;
+        line-height: 110%;
+    }
+}
+
+.articles__content>.articles__summary::before {
+    grid-row-start: 1;
+    content: counter(article_figure);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    font-family: $font-main;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.block-article::before {
+    margin-bottom: 0.3em;
+    display: block;
+    width: max-content;
+    padding: 0.45em 0.9em 0.25em;
+    font-family: $content-family;
+    text-transform: uppercase;
+    font-size: .6em;
+    line-height: 110%;
+    background-color: rgba(116, 87, 87, 0.1);
+    border-radius: 2em;
+    transition: opacity .2s;
+}
+
+.articles__content::after {
+    content: " ";
+    display: block;
+    position: relative;
+    height: 100px;
+    background: linear-gradient(0deg, rgba(104, 111, 110, 0.5) 38%, rgba(114, 92, 92, 0.1));
+    border-radius: 1px;
+    z-index: 0;
+}
+
+.block-article {
+    line-height: 110%;
+    margin-bottom: 0px;
+    position: relative;
+    counter-reset: line-count 0;
+    white-space: normal;
+    display: block;
+}
+
+.block-article__line {
+    position: relative;
+    display: block;
+    max-height: min-content;
+}
+
+.block-article__inner {
+    overflow: auto;
+    overscroll-behavior-x: contain;
+    font-size: 1em;
+    line-height: 110%;
+}
+
+.articles__content--open .articles__toggler {
+    position: sticky;
+    grid-row-start: unset;
+    bottom: 1em;
+    margin-top: 5px;
+
+
+}
+
+.articles__content--open {
+    overflow: unset;
+}
+
+.articles__content--open>.articles__summary {
+    height: auto;
+    grid-template-rows: unset;
+    overflow: unset;
+    gap: 5px;
+}
+
+.articles__content .articles__toggler {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 10px;
+    justify-self: start;
+    padding: 4px 15px;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 10%);
+    border: 0;
+    border-radius: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+.pdf__block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0; // Скрываем фон и сам попап
+    pointer-events: none; // Запрещаем ему быть целью событий
+    transition: 0.5s all;
+    z-index: 2;
+}
+
+.pdf__block.active {
+    // При добавлении класса 'active'
+    opacity: 1; // Показываем фон и попап
+    pointer-events: all; // Возвращаем события
+    transition: 0.5s all;
+    z-index: 2;
+}

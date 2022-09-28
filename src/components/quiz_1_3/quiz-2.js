@@ -3,6 +3,7 @@ import { startPopup } from "../popup/popup";
 import TrainersCheckListContent from "./runTrainers.html";
 import WormUpGuideContent from "./wormUpGuide.html";
 import signUpContent from "./signup.html";
+import {SertSlider} from "../gallery/index";
 
 let questions = [
   {
@@ -111,14 +112,14 @@ function updateQuestionTitle() {
       .getElementById("openCheckListTrainers")
       .addEventListener("click", (e) => {
         e.preventDefault();
-        startPopup(TrainersCheckListContent);
+        SertSlider(startPopup(TrainersCheckListContent));
       });
 
     document
       .getElementById("openWormUpGuide")
       .addEventListener("click", (e) => {
         e.preventDefault();
-        startPopup(WormUpGuideContent);
+        startPopup(startPopup(WormUpGuideContent));
       });
       document
       .querySelector(".sign_up")

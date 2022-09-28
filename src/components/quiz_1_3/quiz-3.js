@@ -2,6 +2,7 @@ import { ComponentArticlesFigure } from "../articles/index";
 import cheatListGymContent from "./cheatGym.html";
 import { startPopup } from "../popup/popup";
 import signUpContent from "./signup.html";
+import {SertSlider} from "../gallery/index";
 
 class Test {
   constructor(questions, results) {
@@ -163,7 +164,7 @@ function createQuiz(test) {
 
     document.getElementById("openCheatGym").addEventListener("click", (e) => {
       e.preventDefault();
-      startPopup(cheatListGymContent);
+      SertSlider(startPopup(cheatListGymContent));
     });
 
     document.querySelector(".sign_up").addEventListener("click", (event) => {
