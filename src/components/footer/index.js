@@ -14,8 +14,7 @@ export default function ComponentFooter() {
         console.log(contentSertificates); 
     });
     
-    document.getElementById("openPrivacy").addEventListener("click", (event) => {
-        event.preventDefault();
+    document.getElementById("openPrivacy").addEventListener("click", () => {
         pdfViewer();
     });
 }

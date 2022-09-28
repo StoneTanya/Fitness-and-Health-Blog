@@ -12,7 +12,7 @@ export default function ComponentStartTest() {
   buttonStartTest.addEventListener("click", function (e) {
     e.preventDefault();
     testPurposeDiv.style.display = "block";
-    window.scrollBy(0, 400)
+    window.scrollBy(0, 200)
     let result = document.getElementById("result");
     if (result != null) {
       result.innerHTML = "";
