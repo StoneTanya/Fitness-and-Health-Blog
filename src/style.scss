@@ -411,7 +411,6 @@ h4 {
 
     .custom-btn {
         width: 130px;
-        height: 40px;
         color: #fff;
         border-radius: 5px;
         padding: 10px 25px;
@@ -512,7 +511,7 @@ h4 {
 
     .test_block_button:hover{
         background-color: #89d8d3;
-      background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+        background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
       }
 
       .test_block_button span {
@@ -566,9 +565,7 @@ h4 {
         height: .1px;
       }
 
-      .test_block_button span:hover:before {
-        height: 100%;
-      }
+      .test_block_button span:hover:before 
 
       .test_block_button span:hover:after {
         width: 100%;
