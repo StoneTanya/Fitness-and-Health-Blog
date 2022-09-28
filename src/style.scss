@@ -414,7 +414,8 @@ h4 {
         color: #fff;
         border-radius: 5px;
         padding: 10px 25px;
-        font-family: 'Lato', sans-serif;
+        font-family: $content-family;
+        font-size: 1.5rem;
         font-weight: 500;
         background: transparent;
         cursor: pointer;
@@ -428,12 +429,12 @@ h4 {
     }
 
     .buttonStartTest {
-        background: #b621fe;
+        background:  rgba(63, 55, 54, 0.8);
         border: none;
         z-index: 1;
     }
 
-    .buttonStartTest:after {
+    .buttonStartTest::after {
         position: absolute;
         content: "";
         width: 0;
@@ -449,7 +450,7 @@ h4 {
         transition: all 0.3s ease;
     }
 
-    .buttonStartTest:hover {
+    .buttonStartTest::after {
         color: #fff;
     }
     .buttonStartTest:hover:after {
@@ -501,25 +502,24 @@ h4 {
         font-size: 1.5rem;
         border-radius: 6px;
         color: white;
-        // padding: 3% 4%;
-        background-color: #4dccc6;
-        background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+        background-color: linear-gradient(0deg, rgba(143, 177, 172, 0.5) 70%, rgba(114, 92, 92, 0.1));
+        background-image: linear-gradient(0deg, rgba(47, 47, 47, 0.5) 70%, rgba(114, 92, 92, 0.1));
         line-height: 42px;
         padding: 0;
         border: none;
     }
 
     .test_block_button:hover{
-        background-color: #89d8d3;
-        background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+        background-color: $accent-color;
+        background-image: linear-gradient(315deg, $accent-color 0%, $accent-color 74%);
       }
 
-      .test_block_button span {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
+    //   .test_block_button span {
+    //     position: relative;
+    //     display: block;
+    //     width: 100%;
+    //     height: 100%;
+    //   }
 
       .test_block_button:before, .test_block_button:after {
         position: absolute;
@@ -542,34 +542,34 @@ h4 {
         width: 100%;
       }
 
-      .test_block_button span:before,
-      .test_block_button span:after {
-       position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-        inset -4px -4px 6px 0 rgba(255,255,255,.9),
-        inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-    transition: all 0.3s ease;
-      }
+    //   .test_block_button span:before,
+    //   .test_block_button span:after {
+    //    position: absolute;
+    // content: "";
+    // left: 0;
+    // bottom: 0;
+    // box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+    //             -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    //     inset -4px -4px 6px 0 rgba(255,255,255,.9),
+    //     inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    // transition: all 0.3s ease;
+    //   }
 
-      .test_block_button span:before {
-        width: .1px;
-        height: 0%;
-      }
+    //   .test_block_button span:before {
+    //     width: .1px;
+    //     height: 0%;
+    //   }
 
-      .test_block_button span:after {
-        width: 0%;
-        height: .1px;
-      }
+    //   .test_block_button span:after {
+    //     width: 0%;
+    //     height: .1px;
+    //   }
 
-      .test_block_button span:hover:before 
+    //   .test_block_button span:hover:before 
 
-      .test_block_button span:hover:after {
-        width: 100%;
-      }
+    //   .test_block_button span:hover:after {
+    //     width: 100%;
+    //   }
 
 
 //стили для статей:        
