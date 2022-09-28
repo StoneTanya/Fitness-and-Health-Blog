@@ -119,7 +119,7 @@ function updateQuestionTitle() {
       .getElementById("openWormUpGuide")
       .addEventListener("click", (e) => {
         e.preventDefault();
-        startPopup(startPopup(WormUpGuideContent));
+        startPopup(WormUpGuideContent);
       });
       document
       .querySelector(".sign_up")
