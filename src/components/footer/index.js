@@ -25,3 +25,4 @@ export function pdfViewer() {
     let pdf = document.querySelector(".pdf__block");            
     pdf.classList.add('active');
 };
+
