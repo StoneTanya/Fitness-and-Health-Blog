@@ -1,6 +1,7 @@
 import navBar from "./navigation.html";
 import { SertSlider } from "../gallery/index";
-
+import { startPopup } from "../popup/popup";
+import contentSertificates from "../gallery/slider.html";
 
 export default function ComponentNav() {
     const navDiv = document.getElementById('navigation');
@@ -8,7 +9,7 @@ export default function ComponentNav() {
 
     document.querySelector(".open-popup").addEventListener("click", (event) => {
         event.preventDefault();
-        SertSlider();
+        SertSlider(startPopup(contentSertificates));
     });
 };
 

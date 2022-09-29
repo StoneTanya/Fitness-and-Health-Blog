@@ -1,9 +1,5 @@
-import contentSertificates from "./slider.html";
-import { startPopup } from "../popup/popup";
-
 
 export function SertSlider() {
-    startPopup(contentSertificates);
     const prev = document.getElementById('prev');
     const next = document.getElementById('next');
     
