@@ -22,7 +22,7 @@ export default function ComponentFooter() {
 export function pdfViewer() {
     const pdfEl = document.getElementById("pdf__window");
     pdfEl.innerHTML = privacy;
-    let pdf = document.querySelector(".pdf__block");            
-    pdf.classList.add('active');
+    // let pdf = document.querySelector(".pdf__block");            
+    // pdf.classList.add('active');
 };
 
