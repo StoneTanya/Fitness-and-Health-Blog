@@ -239,17 +239,48 @@ h4 {
     a {
         text-decoration: none;
         color: #008B8B;
+        position: relative;
     }
 
-    a:hover {
-        text-decoration: underline;
-        color: $accent-color;
+    a::before {  
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+
+    a:hover::before {
+        transform: scaleX(1);
+  transform-origin: bottom left;
+    }
+
+    a::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        inset: 0 0 0 0;
+        background: $accent-color;
+        z-index: -1;
+        transition: transform .3s ease;
     }
 
     h3 {
         font-weight: bold;
     }
+
+    p {
+        margin: 0;
+        box-sizing: border-box;
+        display: grid;
+        place-content: left;
+         
+    }
 }
+
+@media (orientation: landscape) {
+    #quiz__advise__content p {
+      grid-auto-flow: column;
+    }
+  }
 
 .quiz__button {
     font-family: $content-family;
@@ -751,3 +782,5 @@ button {
     transition: 0.5s all;
     z-index: 2;
 }
+
+
