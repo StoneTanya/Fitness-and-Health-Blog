@@ -159,8 +159,8 @@ function createQuiz(test) {
     out += `<div id="quiz__advise">
             <div id="quiz__advise__content">
                 <h3>Хотите уточнить результат?</h3>   
-                <p>Вы можете <a href="#" id="openCheckList">скачать чек-лист «11 вопросов, которые нужно задать себе до тренировки»</a></p>
-                <p><a href="#" class="sign_up">Записаться на консультацию</a></p>
+                <p>Вы можете <a class="link" href="#" id="openCheckList"> скачать чек-лист </a> «11 вопросов, которые нужно задать себе до тренировки»</p>
+                <p><a href="#" class="link sign_up">Записаться на консультацию</a></p>
                 </div>
         </div>`;
     adviseField.innerHTML = out;

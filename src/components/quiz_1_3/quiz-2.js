@@ -94,9 +94,9 @@ function updateQuestionTitle() {
     adviseField.innerHTML = `
                 <div id="quiz__advise__content">
                     <h3>Хотите уточнить результат?</h3>   
-                    <p><a href="#" class="sign_up">Вы можете записаться на консультацию</a></p>
+                    <p>Вы можете <a href="#" class="sign_up link">записаться на консультацию</a></p>
                     <h3>Хотите больше знать о тренировках для ментального здоровья?</h3>   
-                    <p><a href="#articles_mental_health" id="openArticlesMentalHealth">Вот несколько интересных статей об этом.</a></p>
+                    <p><a class="link" href="#articles_mental_health" id="openArticlesMentalHealth">Вот несколько интересных статей об этом</a></p>
                     </div>
             </div>`;
 

@@ -235,65 +235,28 @@ h4 {
     padding: 3% 3%;
     font-family: $content-family;
     font-size: 1.5rem;
-
-    a {
-        text-decoration: none;
-        color: #008B8B;
-        position: relative;
-    }
-
-    a::before {  
-        transform: scaleX(0);
-        transform-origin: bottom right;
-      }
-
-    a:hover::before {
-        transform: scaleX(1);
-  transform-origin: bottom left;
-    }
-
-    a::before {
-        content: " ";
-        display: block;
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        inset: 0 0 0 0;
-        background: $accent-color;
-        z-index: -1;
-        transition: transform .3s ease;
-    }
+}
 
     h3 {
         font-weight: bold;
     }
 
-    p {
-        margin: 0;
-        box-sizing: border-box;
-        display: grid;
-        place-content: left;
-         
+    
+    .link  {
+        color: #207575;
+        text-decoration-color: #207575;
+        transition: background-color 0.5s linear;
     }
-}
-
-@media (orientation: landscape) {
-    #quiz__advise__content p {
-      grid-auto-flow: column;
+      
+      /* Есть возможность навести указатель на элемент */
+      @media (any-hover: hover) {
+        .link:hover {
+         color: #207575;
+        background-color: $back-color;
+        transition: background-color 0.1s linear;
+        }
     }
-  }
-
-.quiz__button {
-    font-family: $content-family;
-    border: 0;
-    border-radius: 6px;
-    background: $btn-color;
-    color: #fff;
-    padding: 10px 25px;
-    font-size: 1.5rem;
-    display: block;
-    margin: 2px auto;
-    cursor: pointer;
-}
+   
 
 .quiz__head {
     font-family: $content-family;
@@ -505,83 +468,66 @@ button {
     top: 2px;
 }
 
-.test_block_button {
-    background-color:#3c4650;
-    line-height: 30px;
-}
+.test_block_button, .quiz__button {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    background-color: #909090;
+    box-shadow: 1px 1px 10px;
+    border-radius: 6px;
+    }
 
-.test_block_button:hover {
-    background-color: #B0C4DE;
-    background-image: linear-gradient(315deg, $accent-color 0%, $accent-color 74%);
-}
+    .test_block_button:hover, .quiz__button:hover {
+        background-color: #504e4e;
+    }
+    .test_block_button:active, .quiz__button:active{
+        box-shadow: inset 1px 1px 10px -1px;
+    }
 
-//   .test_block_button span {
-//     position: relative;
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//   }
+    .quiz__button {
+        font-family: $content-family;
+        border: 0;
+        background: $btn-color;
+        color: #fff;
+        // padding: 10px 25px;
+        font-size: 1.5rem;
+        // display: block;
+        margin: 2px auto;
+        cursor: pointer;
+    }
+// .test_block_button:hover {
+//     background-color: #B0C4DE;
+//     background-image: linear-gradient(315deg, $accent-color 0%, $accent-color 74%);
+// }
 
-.test_block_button:before,
-.test_block_button:after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
-    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .9),
-        -4px -4px 6px 0 rgba(116, 125, 136, .2),
-        inset -4px -4px 6px 0 rgba(255, 255, 255, .9),
-        inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-    transition: all 0.3s ease;
-}
+// .test_block_button:before,
+// .test_block_button:after {
+//     position: absolute;
+//     content: "";
+//     right: 0;
+//     top: 0;
+//     box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .9),
+//         -4px -4px 6px 0 rgba(116, 125, 136, .2),
+//         inset -4px -4px 6px 0 rgba(255, 255, 255, .9),
+//         inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+//     transition: all 0.3s ease;
+// }
 
-.test_block_button:before {
-    height: 0%;
-    width: .1px;
-}
-
-.test_block_button:after {
-    width: 100%;
-}
-
-//   .test_block_button span:before,
-//   .test_block_button span:after {
-//    position: absolute;
-// content: "";
-// left: 0;
-// bottom: 0;
-// box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-//             -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-//     inset -4px -4px 6px 0 rgba(255,255,255,.9),
-//     inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-// transition: all 0.3s ease;
-//   }
-
-//   .test_block_button span:before {
-//     width: .1px;
+// .test_block_button:before {
 //     height: 0%;
-//   }
+//     width: .1px;
+// }
 
-//   .test_block_button span:after {
-//     width: 0%;
-//     height: .1px;
-//   }
-
-//   .test_block_button span:hover:before 
-
-//   .test_block_button span:hover:after {
+// .test_block_button:after {
 //     width: 100%;
-//   }
+// }
 
 
 
 //стили для статей:        
 //карточки-ссылки на статьи
 .articles__wrapper {
-    // display: grid;
-    // gap: 5%;
-    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    // grid-template-rows: repeat(auto-fit, 60vh);
+
     background-color: #F4F3F0;
 }
 
