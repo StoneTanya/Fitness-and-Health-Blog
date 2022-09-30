@@ -3,6 +3,7 @@ import { SertSlider } from "../gallery/index";
 import { startPopup } from "../popup/popup";
 import privacy from "./privacyPolicy.html";
 import contentSertificates from "../gallery/slider.html";
+import popupTemp from "../../components/popup/popup.html";
 
 export default function ComponentFooter() {
     const footerDiv = document.getElementById('footer');
@@ -15,34 +16,28 @@ export default function ComponentFooter() {
     });
     
     document.getElementById("openPrivacy").addEventListener("click", () => {
-        pdfViewer();
-    });
+        startPopup(privacy);
+        const popupclass = popupTemp.querySelector(".popup");
+        popupclass.classList.remove('popup');
+        let pdf = document.querySelector(".pdf__div"); 
+        pdf.classList.add('pdf_active');
+});
 }
 
-export function pdfViewer() {
-    const pdfEl = document.getElementById("pdf__window");
-    pdfEl.innerHTML = privacy;
-    let pdf = document.querySelector(".pdf__block"); 
-    pdf.classList.add('active');
-    // let newWindow = open('', 'example', 'width=300,height=300')
-    // newWindow.focus();
+// export function pdfViewer() {
+//     let newWindow = window.open('', 'example', 'width=300,height=300')
+//     newWindow.focus();
+//     newWindow.onload = function() {
+//         newWindow.body.insertAdjacentHTML('afterbegin', privacy);
+//     };
+    
+    
+    // const pdfEl = document.getElementById("pdf__window");
+    // pdfEl.innerHTML = privacy;
+    // let pdf = document.querySelector(".pdf__block"); 
+    // pdf.classList.add('active');
+    
     
     // alert(newWindow.location.href); // (*) about:blank, загрузка ещё не началась
-    // newWindow.onload = function() {
-    //     let privacy = `<object class="pdf__block" data="../../image/materials/PrivacyPolicy.pdf" type="application/pdf" width="768" height="1024">
-    //         <p>
-    //             Ваш браузер не поддерживает PDF-файлы.
-    //             <a href="../../image/materials/PrivacyPolicy.pdf" >Загрузить Политика конфиденциальности</a>.
-    //         </p>
-    //     </object>`;
-    //     newWindow.document.getElementById("pdf__window").insertAdjacentHTML('afterbegin', privacy);
-    // };
 
-
-//     let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-//     width=600,height=300,left=100,top=100`;
-//     let pdfWindow = window.open("", "Политика конфиденциальности", params);
-
-
-};
-
+// };
