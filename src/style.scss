@@ -23,6 +23,11 @@ sans-serif;
     font-family: $content-family;
 }
 
+#test_start {
+    background-color: #CD5C5C;
+}
+
+
 #my__name,
 h1,
 h2,
@@ -31,8 +36,6 @@ h4 {
 }
 
 #navigation {
-    padding-top: 1%;
-    padding-bottom: 1%;
     height: fit-content;
 }
 
@@ -68,6 +71,8 @@ h4 {
         max-height: 100%;
         margin: 0;
         object-fit: cover;
+        margin-top: 3%;
+        border-radius: 16px;
     }
 }
 
@@ -86,10 +91,9 @@ h4 {
     line-height: 125%;
 }
 
-.intro__content {
+#intro {
     background: radial-gradient(50% 50% at bottom right, rgba(58, 95, 86, 0.55) 0%, rgba(58, 95, 86, 0) 100%) no-repeat;
-    background-color: #F4F3F0;
-}
+    }
 
 .intro__content__text {
     margin-left: -15%;
@@ -184,18 +188,17 @@ h4 {
     }
 }
 
-.about__content {
-    margin-top: 5%;
-    background: radial-gradient(50% 50% at bottom left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%),
-        radial-gradient(50% 50% at right top, rgba(58, 95, 86, 0.55) 0%, rgba(58, 95, 86, 0) 100%) no-repeat;
-}
+
 
 .about__greet {
     margin-bottom: 5%;
     line-height: 1.5;
     font-size: 1.5rem;
 }
-
+#about{
+    background: radial-gradient(50% 50% at bottom left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%),
+        radial-gradient(50% 50% at right top, rgba(58, 95, 86, 0.55) 0%, rgba(58, 95, 86, 0) 100%) no-repeat;
+}
 //about - end
 
 //quiz
@@ -222,12 +225,13 @@ h4 {
     padding: 5% 5%;
 }
 
-.result__back,
-.test__block_choise {
+.result__back {
     background: radial-gradient(50% 50% at top right, rgba(207, 103, 108, 0.296) 0%, rgba(219, 52, 59, 0) 100%) no-repeat;
-    background-color: hsl(45, 15%, 95%);
 }
 
+#test__block {
+    background: radial-gradient(50% 50% at top right, rgba(207, 103, 108, 0.296) 0%, rgba(219, 52, 59, 0) 100%) no-repeat;
+}
 
 #quiz__advise__content {
     border: 2px solid #757575;
@@ -396,19 +400,18 @@ h4 {
 
 #start_test {
     height: 100%;
-    background: radial-gradient(50% 50% at top left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%),
-        radial-gradient(50% 50% at bottom right, rgba(207, 103, 108, 0.296) 0%, rgba(219, 52, 59, 0) 100%) no-repeat;
-    background-color: hsl(45, 15%, 95%);
-    padding: 5% 3%;
-
     li,
     p {
         font-size: 1.5rem;
     }
 }
+#test_start {
+    background: radial-gradient(50% 50% at top left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%),
+    radial-gradient(50% 50% at bottom right, rgba(207, 103, 108, 0.296) 0%, rgba(219, 52, 59, 0) 100%) no-repeat;
+padding: 5% 3%;
+}
 
 //hover-эффект для кнопки 
-
 button {
     margin: 20px;
 }
@@ -495,40 +498,14 @@ button {
         margin: 2px auto;
         cursor: pointer;
     }
-// .test_block_button:hover {
-//     background-color: #B0C4DE;
-//     background-image: linear-gradient(315deg, $accent-color 0%, $accent-color 74%);
-// }
 
-// .test_block_button:before,
-// .test_block_button:after {
-//     position: absolute;
-//     content: "";
-//     right: 0;
-//     top: 0;
-//     box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .9),
-//         -4px -4px 6px 0 rgba(116, 125, 136, .2),
-//         inset -4px -4px 6px 0 rgba(255, 255, 255, .9),
-//         inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-//     transition: all 0.3s ease;
-// }
-
-// .test_block_button:before {
-//     height: 0%;
-//     width: .1px;
-// }
-
-// .test_block_button:after {
-//     width: 100%;
-// }
 
 
 
 //стили для статей:        
 //карточки-ссылки на статьи
-.articles__wrapper {
-
-    background-color: #F4F3F0;
+#articles {
+    // background-color: #F4F3F0;
 }
 
 .articles__wrapper>div>img {
@@ -580,13 +557,12 @@ button {
 
     a {
         text-decoration: none;
-        color: #008B8B;
-        border-bottom: 1px solid;
+        color: #11a3a3;
         // border-bottom-color: rgba(205, 123, 154, 0.825);
     }
     a:hover {
         text-decoration: none;
-        color: $back-color;
+        color: #CD5C5C;
         // border-bottom-color: rgba(203, 17, 88, 0.2);
     }
     a:visited {
@@ -605,7 +581,7 @@ button {
     height: 110px;
     padding: 5px;
     padding-bottom: 0;
-    background-color: rgba(114, 92, 92, 0.1);
+    background-color: rgba(244, 243, 240, 1);
 
     p {
         letter-spacing: normal;
@@ -647,7 +623,7 @@ button {
     display: block;
     position: relative;
     height: 100px;
-    background: linear-gradient(0deg, rgba(104, 111, 110, 0.5) 38%, rgba(114, 92, 92, 0.1));
+    background: linear-gradient(180deg,rgba(244, 243, 240, 1),rgba(201, 138, 118, 0.5));
     border-radius: 1px;
     z-index: 0;
 }
