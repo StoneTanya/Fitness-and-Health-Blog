@@ -580,19 +580,19 @@ button {
 
     a {
         text-decoration: none;
-        color: $accent-color;
+        color: #008B8B;
         border-bottom: 1px solid;
-        border-bottom-color: rgba(205, 123, 154, 0.825);
+        // border-bottom-color: rgba(205, 123, 154, 0.825);
     }
     a:hover {
         text-decoration: none;
-        color: #d12626;
-        border-bottom-color: rgba(203, 17, 88, 0.2);
+        color: $back-color;
+        // border-bottom-color: rgba(203, 17, 88, 0.2);
     }
     a:visited {
         text-decoration: none;
-        color: #800080;
-        border-bottom-color: rgba(204, 0, 132, 0.727);
+        color: $btn-color;
+        // border-bottom-color: rgba(204, 0, 132, 0.727);
     }
 }
 
