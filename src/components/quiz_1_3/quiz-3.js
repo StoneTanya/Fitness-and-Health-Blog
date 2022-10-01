@@ -2,7 +2,7 @@ import { ComponentArticlesFigure } from "../articles/index";
 import cheatListGymContent from "./cheatGym.html";
 import { startPopup } from "../popup/popup";
 import signUpContent from "./signup.html";
-import {SertSlider} from "../gallery/index";
+import { SertSlider } from "../gallery/index";
 
 class Test {
   constructor(questions, results) {
@@ -74,8 +74,8 @@ class Result {
 }
 
 let gymCheat = "";
-gymCheat += `<div id="">
-    <p>Вы можете <a href="#" id="openCheatGym">скачать шпаргалку по тренажерке</a></p>
+gymCheat += `<div id="gym_list">
+    <p>Вы можете <a href="#" id="openCheatGym" class="link">скачать шпаргалку по тренажерке</a></p>
     </div>`;
 
 //Массив с результатами
@@ -147,9 +147,9 @@ function createQuiz(test) {
     out += `<div id="quiz__advise">
                 <div id="quiz__advise__content">
                     <h3>Хотите уточнить результат?</h3>   
-                    <p>Вы можете <a href="#" class="sign_up">Записаться на консультацию</a></p>
+                    <p>Вы можете <a href="#" class="link sign_up">записаться на консультацию</a></p>
                     <h3>Хотите больше знать о том, как тренировки влияют на фигуру?</h3>   
-                    <p>Вот <a href="#articles_figure" id="openArticlesFigure">несколько интересных статей об этом</a></p>
+                    <p>Вот <a href="#articles_figure" class="link" id="openArticlesFigure">несколько интересных статей об этом</a></p>
                     </div>
             </div>`;
     adviseField.innerHTML = out;

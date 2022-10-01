@@ -1,22 +1,25 @@
-import {ComponentArticlesMental} from "../articles/index";
-import {startPopup} from "../popup/popup";
+import { ComponentArticlesMental } from "../articles/index";
+import { startPopup } from "../popup/popup";
 import TrainersCheckListContent from "./runTrainers.html";
 import WormUpGuideContent from "./wormUpGuide.html";
 import signUpContent from "./signup.html";
-import {SertSlider} from "../gallery/index";
+import { SertSlider } from "../gallery/index";
 
-let questions = [{
+let questions = [
+  {
     title: "Вы хотели бы тренироваться в компании или самостоятельно?",
     left: "В компании",
     right: "Cамостоятельно",
   },
   {
-    title: "Вы предпочитаете частые, но короткие тренировки, или редкие, но длительные?",
+    title:
+      "Вы предпочитаете частые, но короткие тренировки, или редкие, но длительные?",
     left: "Частые, но короткие",
     right: "Редкие, но длительные",
   },
   {
-    title: "Вам важно, чтобы тренировки отличались друг от друга, или вы готовы придерживаться системы?",
+    title:
+      "Вам важно, чтобы тренировки отличались друг от друга, или вы готовы придерживаться системы?",
     left: "Хочу разнообразия",
     right: "Предпочитаю системность",
   },
@@ -38,7 +41,7 @@ answer.set(
 answer.set(
   3,
   "Вы можете присоединиться к сообществу бегунов или велосипедистов в вашем городе. Так вы получите системные аэробные нагрузки — они лучше других помогают справиться с тревогой и стрессом. А еще найдете компанию единомышленников." +
-  `${checkListTrainers}`
+    `${checkListTrainers}`
 ); //(011) = 3
 answer.set(
   5,
@@ -47,7 +50,7 @@ answer.set(
 answer.set(
   1,
   "Попробуйте групповые беговые тренировки, из часто организовывают самостоятельные тренеры по бегу. Активное движение хорошо снимает стресс, а приятная компания поднимет настроение." +
-  `${checkListTrainers}`
+    `${checkListTrainers}`
 ); //(001) = 1
 answer.set(
   6,
@@ -56,7 +59,7 @@ answer.set(
 answer.set(
   2,
   "Попробуйте начать бегать или освоить велосипед. Регулярная активность снижает уровень стресса и помогает бороться с тревогой." +
-  `${checkListTrainers}`
+    `${checkListTrainers}`
 ); //(010) = 2
 answer.set(
   4,
@@ -85,15 +88,15 @@ function updateQuestionTitle() {
     rightButton.style.display = "none"; // убираем текст вопроса справа
     let result = document.getElementById("result");
     result.innerHTML = answer.get(finalMask);
-    result.classList.add('active');
+    result.classList.add("active");
 
     let adviseField = document.getElementById("quiz__advise");
     adviseField.innerHTML = `
                 <div id="quiz__advise__content">
                     <h3>Хотите уточнить результат?</h3>   
-                    <p>Вы можете <a href="#" class="sign_up">записаться на консультацию</a></p>
+                    <p>Вы можете <a href="#" class="sign_up link">записаться на консультацию</a></p>
                     <h3>Хотите больше знать о тренировках для ментального здоровья?</h3>   
-                    <p>Вот <a href="#articles_mental_health" id="openArticlesMentalHealth">несколько интересных статей об этом.</a></p>
+                    <p><a class="link" href="#articles_mental_health" id="openArticlesMentalHealth">Вот несколько интересных статей об этом</a></p>
                     </div>
             </div>`;
 
@@ -102,7 +105,7 @@ function updateQuestionTitle() {
       .addEventListener("click", (e) => {
         e.preventDefault();
         ComponentArticlesMental();
-        window.scrollBy(0, 1100)
+        window.scrollBy(0, 1100);
       });
 
     document
