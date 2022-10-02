@@ -750,6 +750,18 @@ button {
     .popup.active {
         width: 40vh;
     }
+
+    img {
+        border-radius: 0px !important;
+    }
+    
+    .about__image {
+        padding: 0 !important;
+    }
+
+    .articles__wrapper__inner {
+        padding: 0 !important;
+    }
 }
 
 
