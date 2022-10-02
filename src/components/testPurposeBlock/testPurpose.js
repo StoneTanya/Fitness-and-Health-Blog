@@ -13,10 +13,10 @@ export default function ComponentTestPurpose() {
   const testPurposeDiv = document.getElementById("test__block");
   testPurposeDiv.innerHTML = testDiv;
 
-  let buttonHobby = document.getElementById("button__hobby");
-  let buttonStress = document.getElementById("button__stress");
-  let buttonLook = document.getElementById("button__look");
-  let buttonMedicine = document.getElementById("button__medicine");
+  const buttonHobby = document.getElementById("button__hobby");
+  const buttonStress = document.getElementById("button__stress");
+  const buttonLook = document.getElementById("button__look");
+  const buttonMedicine = document.getElementById("button__medicine");
   const quizDiv = document.getElementById("quiz__wrapper");
 
   buttonHobby.addEventListener("click", function (e) {
@@ -24,6 +24,7 @@ export default function ComponentTestPurpose() {
     testPurposeDiv.style.display = "none";
     quizDiv.innerHTML = testHobby;
     startTest1();
+    quizDiv.setAttribute("class", "quiz__wrapper_open");
   });
 
   buttonStress.addEventListener("click", function (e) {
@@ -31,6 +32,7 @@ export default function ComponentTestPurpose() {
     testPurposeDiv.style.display = "none";
     quizDiv.innerHTML = quiz_2;
     startTest2();
+    quizDiv.setAttribute("class", "quiz__wrapper_open");
   });
 
   buttonLook.addEventListener("click", function (e) {
@@ -38,15 +40,16 @@ export default function ComponentTestPurpose() {
     testPurposeDiv.style.display = "none";
     quizDiv.innerHTML = testHobby;
     startTest3();
+    quizDiv.setAttribute("class", "quiz__wrapper_open");
   });
 
   buttonMedicine.addEventListener("click", function (e) {
     e.preventDefault();
     testPurposeDiv.style.display = "none";
     quizDiv.innerHTML = quiz_4;
+    quizDiv.setAttribute("class", "quiz__wrapper_open");
 
     const signUpLink = document.querySelector(".sign_up");
-    console.log(signUpLink);
 
     signUpLink.addEventListener("click", (event) => {
         event.preventDefault();

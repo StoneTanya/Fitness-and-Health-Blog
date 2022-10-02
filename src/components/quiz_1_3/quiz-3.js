@@ -144,8 +144,8 @@ function createQuiz(test) {
     let adviseField = document.getElementById("quiz__advise");
 
     let out = "";
-    out += `<div id="quiz__advise">
-                <div id="quiz__advise__content">
+    out += `<div class="pb-5 row d-flex justify-content-center">
+                <div id="quiz__advise__content" class="col-8">
                     <h3>Хотите уточнить результат?</h3>   
                     <p>Вы можете <a href="#" class="link sign_up">записаться на консультацию</a></p>
                     <h3>Хотите больше знать о том, как тренировки влияют на фигуру?</h3>   
