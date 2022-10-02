@@ -1,5 +1,4 @@
 import startTest from "./index.html";
-// import ComponentTestPurpose from "../testPurposeBlock/testPurpose";
 
 export default function ComponentStartTest() {
   const testStart = document.getElementById("test_start");
@@ -8,11 +7,13 @@ export default function ComponentStartTest() {
   let buttonStartTest = document.getElementById("buttonStartTest");
   let testPurposeDiv = document.getElementById("test__block");
   testPurposeDiv.style.display = "none";
+  const quizDiv = document.getElementById("quiz__wrapper");
 
   buttonStartTest.addEventListener("click", function (e) {
     e.preventDefault();
     testPurposeDiv.style.display = "block";
-    window.scrollBy(0, 200)
+    window.scrollBy(0, 300);
+    quizDiv.removeAttribute("class", "quiz__wrapper_open");   //// убираем 
     let result = document.getElementById("result");
     if (result != null) {
       result.innerHTML = "";

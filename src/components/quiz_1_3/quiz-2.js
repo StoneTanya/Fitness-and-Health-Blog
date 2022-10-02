@@ -91,8 +91,8 @@ function updateQuestionTitle() {
     result.classList.add("active");
 
     let adviseField = document.getElementById("quiz__advise");
-    adviseField.innerHTML = `
-                <div id="quiz__advise__content">
+    adviseField.innerHTML = `<div class="pb-5 row d-flex justify-content-center">
+                <div id="quiz__advise__content" class="col-8">
                     <h3>Хотите уточнить результат?</h3>   
                     <p>Вы можете <a href="#" class="sign_up link">записаться на консультацию</a></p>
                     <h3>Хотите больше знать о тренировках для ментального здоровья?</h3>   
