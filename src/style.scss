@@ -114,6 +114,9 @@ h4 {
 
 
 /* about start */
+.about__content {
+    padding-top: 5%;
+}
 .about__image__wrapper {
     width: 100%;
 
@@ -128,6 +131,7 @@ h4 {
 
 .about__greet {
     margin-bottom: 5%;
+    margin-top: 5%;
     line-height: 1.5;
     font-size: 1.5rem;
 }
@@ -419,8 +423,9 @@ button {
 }
 /* slider end */
 
-/* articles */       
-/* articles cards */
+/* articles-block start */
+
+/* articles cards start */
 #articles {
     background: radial-gradient(50% 50% at top right, rgba(207, 103, 108, 0.296) 0%, rgba(219, 52, 59, 0) 100%) no-repeat;
 }
@@ -454,6 +459,14 @@ button {
     img {
         border-radius: 16px;
     }
+}
+/* articles cards end */
+
+/* articles inner */
+
+#articles_block {
+    background: radial-gradient(50% 50% at 0% 10%, rgba(58, 95, 86, 0.376) 0%, rgba(58, 95, 86, 0) 100%), 
+    radial-gradient(50% 50% at 100% 80%, rgba(58, 95, 86, 0.376) 0%, rgba(58, 95, 86, 0) 100%);
 }
 
 .article_figure {
@@ -494,7 +507,7 @@ button {
     height: 110px;
     padding: 5px;
     padding-bottom: 0;
-    background-color: rgba(244, 243, 240, 1);
+    background-color: rgba(202, 220, 227, 0.4);
 
     p {
         letter-spacing: normal;
@@ -536,7 +549,8 @@ button {
     display: block;
     position: relative;
     height: 100px;
-    background: linear-gradient(180deg,rgba(244, 243, 240, 1),rgba(201, 138, 118, 0.5));
+    background: linear-gradient(360deg, rgba(91, 76, 93, 1),rgba(202, 220, 227, 0.4));
+    // background: linear-gradient(180deg,rgba(244, 243, 240, 1),rgba(201, 138, 118, 0.5));
     border-radius: 1px;
     z-index: 0;
 }
