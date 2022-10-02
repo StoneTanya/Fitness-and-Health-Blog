@@ -352,19 +352,27 @@ button {
     z-index: 2;
 }
 
+#pdf__block {
+    width: 100%;
+    height: 100%;
+}
+
+.long {
+    height: 80%;
+}
+
 .popup {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0); // Центрируем и масштабируем в 0 само окно
-    width: 35%;
-    padding: 25px;
     transition: 0.5s all;
 }
 
 .popup.active {
     transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем
     transition: 0.5s all;
+    width: 50%;
 }
 
 .close-popup {
@@ -382,6 +390,10 @@ button {
     display: none;
     width: 100%;
     height: 100%;
+
+    img {
+        width: 100%;
+    }
 }
 
 .sliderContainer div:first-child {
@@ -651,7 +663,7 @@ button {
     left: 0;
 }
 
-.pdf_active {
+.pdf__active {
     opacity: 1;
     position: absolute;
     transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем

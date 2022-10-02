@@ -52,8 +52,8 @@ export default function ComponentTestPurpose() {
     const signUpLink = document.querySelector(".sign_up");
 
     signUpLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        startPopup(signUpContent);
-      });
+      event.preventDefault();
+      startPopup(signUpContent, "long");
+    });
   });
 }
