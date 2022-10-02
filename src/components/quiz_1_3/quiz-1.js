@@ -4,9 +4,9 @@ import signUpContent from "./signup.html";
 
 class Test {
   constructor(questions, results) {
-    this.questions = questions; //Массив с вопросами
+    this.questions = questions;     //Массив с вопросами
     this.results = results; //массив с результатами
-    this.score = ""; //Количество набранных очков
+    this.score = "";       //Количество набранных очков
     this.result = 0; //Номер результата из массива
     this.current = 0; //Номер текущего вопроса
   }

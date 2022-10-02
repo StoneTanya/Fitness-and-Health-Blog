@@ -61,3 +61,4 @@ function expandArticle(n) {
         window.scrollTo(0, o.offsetTop - 150))
       : (e.innerHTML = "- Свернуть");
 }
+

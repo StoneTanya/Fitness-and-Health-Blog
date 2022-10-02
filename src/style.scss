@@ -584,10 +584,11 @@ button {
 }
 
 .block-article__inner {
-    overflow: auto;
+    // overflow: auto;
     overscroll-behavior-x: contain;
     font-size: 1em;
     line-height: 110%;
+    max-height: fit-content;
 }
 
 .articles__content--open .articles__toggler {
