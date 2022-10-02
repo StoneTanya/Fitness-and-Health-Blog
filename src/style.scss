@@ -373,7 +373,7 @@ button {
 .popup.active {
     transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем
     transition: 0.5s all;
-    width: 50vh;
+    width: 55vh;
 }
 
 .close-popup {
@@ -714,6 +714,10 @@ button {
     .quiz__button {
         font-size: 1.1rem;
     }
+
+    .popup.active {
+        width: 50vh;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width:820px) {
@@ -731,6 +735,23 @@ button {
     .quiz__button {
         font-size: 1.1rem;
     }
+
+    .popup.active {
+        width: 35vh;
+    }
 }
+
+@media screen and (max-width: 768px) {
+    .long {
+        height: 80%;
+        width: 100% !important;
+    }
+
+    .popup.active {
+        width: 40vh;
+    }
+}
+
+
 
 /* all media end */ 
