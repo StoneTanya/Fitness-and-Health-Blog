@@ -22,6 +22,16 @@ sans-serif;
     font-family: $content-family;
 }
 
+#navigation {
+    background-color: $back-color;
+    font-size: 1.3rem;
+
+    .nav-link {
+        color: $btn-color;
+        font-family: $font-main;
+    }
+}
+
 #test_start {
     background-color: #CD5C5C;
 }
@@ -38,6 +48,9 @@ h4 {
 }
 
 .telegram-link {
+    display: flex;
+    align-items: center;
+
     img {
         width: 35px;
     }
@@ -45,7 +58,7 @@ h4 {
 
 .nav__name {
     font-family: $font-main;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: $title-color;
     line-height: 100%;
 }
