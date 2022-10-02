@@ -359,6 +359,7 @@ button {
 
 .long {
     height: 80%;
+    width: 50% !important;
 }
 
 .popup {
@@ -372,7 +373,7 @@ button {
 .popup.active {
     transform: translate(-50%, -50%) scale(1); // Так же центрируем и плавно увеличиваем
     transition: 0.5s all;
-    width: 50%;
+    width: 50vh;
 }
 
 .close-popup {
@@ -712,10 +713,6 @@ button {
 
     .quiz__button {
         font-size: 1.1rem;
-    }
-
-    .popup.active {
-        width: 60%;
     }
 }
 
