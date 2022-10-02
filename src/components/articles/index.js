@@ -8,7 +8,9 @@ export function ComponentAtricles() {
   mentalLink.onclick = function (e) {
     e.preventDefault();
     ComponentArticlesMental();
-    mentalLink.onclick = function (e) {
+    window.scrollBy(0, 500);
+
+  mentalLink.onclick = function (e) {
       e.preventDefault();
       ComponentAtricles();
     };
@@ -18,7 +20,9 @@ export function ComponentAtricles() {
   figureLink.onclick = function (e) {
     e.preventDefault();
     ComponentArticlesFigure();
-    figureLink.onclick = function (e) {
+    window.scrollBy(0, 500);
+
+  figureLink.onclick = function (e) {
       e.preventDefault();
       ComponentAtricles();
     };
