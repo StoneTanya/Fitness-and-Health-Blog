@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.row {
+    --bs-gutter-x: 0;
+}
+
 $font-main: 'Philosopher';
 $back-color:rgb(251, 233, 231);
 $accent-color: rgba(240, 156, 150, 1);
@@ -28,7 +32,7 @@ sans-serif;
 
     .nav-link {
         color: $btn-color;
-        font-family: $font-main;
+        font-family: $content-family;
     }
 }
 
@@ -43,9 +47,6 @@ h4 {
     font-family: $font-main;
 }
 
-#navigation {
-    height: fit-content;
-}
 
 .telegram-link {
     display: flex;
@@ -59,7 +60,7 @@ h4 {
 .nav__name {
     font-family: $font-main;
     font-size: 2.5rem;
-    color: $title-color;
+    color: black;
     line-height: 100%;
 }
 
@@ -252,10 +253,6 @@ h3 {
     background: radial-gradient(50% 50% at top left, rgba(184, 125, 88, 0.8) 0%, rgba(184, 125, 88, 0) 100%),
     radial-gradient(50% 50% at bottom right, rgba(207, 103, 108, 0.296) 0%, rgba(219, 52, 59, 0) 100%) no-repeat;
 padding: 5% 3%;
-}
-
-button {
-    margin: 20px;
 }
 
 .custom-btn {
@@ -466,6 +463,8 @@ button {
     text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
     a {
         position: absolute;
         top: 50%;
@@ -652,6 +651,7 @@ button {
 
     ul {
         list-style-type: none;
+        margin-left: -30px;
     }
 
     a {
@@ -698,10 +698,11 @@ button {
     .intro__content {
         display: flex;
         flex-flow: column;
+        align-items: center;
     }
 
     .intro__content__text {
-        margin-left: 0%;
+        margin-left: 5%;
         margin-bottom: 10%;
         margin-top: -47%;
     }
