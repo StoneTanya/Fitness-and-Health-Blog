@@ -41,7 +41,7 @@ answer.set(
 answer.set(
   3,
   "Вы можете присоединиться к сообществу бегунов или велосипедистов в вашем городе. Так вы получите системные аэробные нагрузки — они лучше других помогают справиться с тревогой и стрессом. А еще найдете компанию единомышленников." +
-    `${checkListTrainers}`
+  `${checkListTrainers}`
 ); //(011) = 3
 answer.set(
   5,
@@ -50,7 +50,7 @@ answer.set(
 answer.set(
   1,
   "Попробуйте групповые беговые тренировки, из часто организовывают самостоятельные тренеры по бегу. Активное движение хорошо снимает стресс, а приятная компания поднимет настроение." +
-    `${checkListTrainers}`
+  `${checkListTrainers}`
 ); //(001) = 1
 answer.set(
   6,
@@ -59,7 +59,7 @@ answer.set(
 answer.set(
   2,
   "Попробуйте начать бегать или освоить велосипед. Регулярная активность снижает уровень стресса и помогает бороться с тревогой." +
-    `${checkListTrainers}`
+  `${checkListTrainers}`
 ); //(010) = 2
 answer.set(
   4,
@@ -91,7 +91,8 @@ function updateQuestionTitle() {
     result.classList.add("active");
 
     let adviseField = document.getElementById("quiz__advise");
-    adviseField.innerHTML = `<div class="pb-5 row d-flex justify-content-center">
+    let out = "";
+    out += `<div class="pb-5 row d-flex justify-content-center">
                 <div id="quiz__advise__content" class="col-8">
                     <h3>Хотите уточнить результат?</h3>   
                     <p>Вы можете <a href="#" class="sign_up link">записаться на консультацию</a></p>
@@ -99,6 +100,12 @@ function updateQuestionTitle() {
                     <p><a class="link" href="#articles_mental_health" id="openArticlesMentalHealth">Вот несколько интересных статей об этом</a></p>
                     </div>
             </div>`;
+    adviseField.innerHTML = out;
+
+    document.querySelector(".sign_up").addEventListener("click", (event) => {
+      event.preventDefault();
+      startPopup(signUpContent);
+    });
 
     document
       .getElementById("openArticlesMentalHealth")
@@ -121,10 +128,6 @@ function updateQuestionTitle() {
         e.preventDefault();
         startPopup(WormUpGuideContent);
       });
-    document.querySelector(".sign_up").addEventListener("click", (event) => {
-      event.preventDefault();
-      startPopup(signUpContent);
-    });
   }
 }
 
