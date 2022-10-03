@@ -115,19 +115,25 @@ function updateQuestionTitle() {
         window.scrollBy(0, 1100);
       });
 
-    document
+      switch (finalMask) {
+      case 1:
+      case 2:
+      case 3:
+      document
       .getElementById("openCheckListTrainers")
       .addEventListener("click", (e) => {
         e.preventDefault();
         SertSlider(startPopup(TrainersCheckListContent));
       });
 
-    document
+      document
       .getElementById("openWormUpGuide")
       .addEventListener("click", (e) => {
         e.preventDefault();
         startPopup(WormUpGuideContent);
       });
+      break;
+    };
   }
 }
 
