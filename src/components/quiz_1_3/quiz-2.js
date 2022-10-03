@@ -30,7 +30,7 @@ let finalMask = 0; //двоичный код результата
 
 let checkListTrainers = "";
 checkListTrainers += `<div id="">
-    <p>Вы можете <a href="#" id="openCheckListTrainers">скачать чек-лист по выбору беговых кроссовок</a> и <a href="#" id="openWormUpGuide">инструкцию</a> по разминке перед пробежкой</p>
+    <p>Вы можете <a href="#" id="openCheckListTrainers" class="link">скачать чек-лист по выбору беговых кроссовок</a> и <a href="#" id="openWormUpGuide" class="link">инструкцию</a> по разминке перед пробежкой</p>
 </div>`;
 
 let answer = new Map();
