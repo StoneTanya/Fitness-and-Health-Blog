@@ -138,6 +138,7 @@ function createQuiz(test) {
   } else {
     //Если это конец, то выводим результат
     buttonsElem.innerHTML = "";
+    let finalScore = test.results[test.result].value;
     headElem.innerHTML = test.results[test.result].text;
 
     //блок с "советами" и ссылками на статьи и запись на консультацию
@@ -162,10 +163,16 @@ function createQuiz(test) {
         ComponentArticlesFigure();
       });
 
+    switch (finalScore) {
+    case "11":
+    case "01":
+    case "00": 
     document.getElementById("openCheatGym").addEventListener("click", (e) => {
       e.preventDefault();
       SertSlider(startPopup(cheatListGymContent));
     });
+    break;
+  };
 
     document.querySelector(".sign_up").addEventListener("click", (event) => {
       event.preventDefault();

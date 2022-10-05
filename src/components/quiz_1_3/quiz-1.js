@@ -160,10 +160,11 @@ function createQuiz(test) {
             <div id="quiz__advise__content" class="col-8">
                 <h3>Хотите уточнить результат?</h3>   
                 <p>Вы можете <a class="link" href="#" id="openCheckList"> скачать чек-лист </a> «11 вопросов, которые нужно задать себе до тренировки»</p>
-                <p><a href="#" class="link sign_up">Записаться на консультацию</a></p>
+                <p><a href="#" class="sign_up link">Записаться на консультацию</a></p>
                 </div>
         </div>`;
     adviseField.innerHTML = out;
+    
 
     document
       .getElementById("openCheckList")
@@ -171,6 +172,7 @@ function createQuiz(test) {
         event.preventDefault();
         startPopup(checkListContent);
       });
+
     document.querySelector(".sign_up").addEventListener("click", (event) => {
       event.preventDefault();
       startPopup(signUpContent);
