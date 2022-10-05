@@ -164,19 +164,21 @@ function createQuiz(test) {
       });
 
     switch (finalScore) {
-    case "11":
-    case "01":
-    case "00": 
-    document.getElementById("openCheatGym").addEventListener("click", (e) => {
-      e.preventDefault();
-      SertSlider(startPopup(cheatListGymContent));
-    });
-    break;
-  };
+      case "11":
+      case "01":
+      case "00":
+        document
+          .getElementById("openCheatGym")
+          .addEventListener("click", (e) => {
+            e.preventDefault();
+            SertSlider(startPopup(cheatListGymContent));
+          });
+        break;
+    }
 
     document.querySelector(".sign_up").addEventListener("click", (event) => {
       event.preventDefault();
-      startPopup(signUpContent);
+      startPopup(signUpContent, "long");
     });
   }
 }

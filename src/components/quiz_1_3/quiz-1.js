@@ -175,7 +175,7 @@ function createQuiz(test) {
 
     document.querySelector(".sign_up").addEventListener("click", (event) => {
       event.preventDefault();
-      startPopup(signUpContent);
+      startPopup(signUpContent, "long");
     });
   }
 }
